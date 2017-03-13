@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++ 关于cin() 和 getline(); | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="cin &amp;gt;&amp;gt; 输入流遇到空格（space）会当作是输入结束的标志，例如下面的操作：1234string name;cout &amp;lt;&amp;lt; &quot;Please input your name :&quot; ;cin &amp;gt;&amp;gt; name;cout &amp;lt;&amp;lt; &quot;Your name is &quot; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; endl;
+当你在终端输入的的名字有空格时就不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ 关于cin() 和 getline();">
+<meta property="og:url" content="http://yoursite.com/2017/03/13/c++_cin/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="cin &amp;gt;&amp;gt; 输入流遇到空格（space）会当作是输入结束的标志，例如下面的操作：1234string name;cout &amp;lt;&amp;lt; &quot;Please input your name :&quot; ;cin &amp;gt;&amp;gt; name;cout &amp;lt;&amp;lt; &quot;Your name is &quot; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; endl;
+当你在终端输入的的名字有空格时就不">
+<meta property="og:updated_time" content="2016-12-15T15:38:32.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++ 关于cin() 和 getline();">
+<meta name="twitter:description" content="cin &amp;gt;&amp;gt; 输入流遇到空格（space）会当作是输入结束的标志，例如下面的操作：1234string name;cout &amp;lt;&amp;lt; &quot;Please input your name :&quot; ;cin &amp;gt;&amp;gt; name;cout &amp;lt;&amp;lt; &quot;Your name is &quot; &amp;lt;&amp;lt; name &amp;lt;&amp;lt; endl;
+当你在终端输入的的名字有空格时就不">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-c++_cin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/13/c++_cin/" class="article-date">
+  <time datetime="2017-03-13T13:54:16.615Z" itemprop="datePublished">2017-03-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++ 关于cin() 和 getline();
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> cin &gt;&gt; 输入流遇到空格（space）会当作是输入结束的标志，例如下面的操作：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">string name;</div><div class="line">cout &lt;&lt; <span class="string">"Please input your name :"</span> ;</div><div class="line">cin &gt;&gt; name;</div><div class="line">cout &lt;&lt; <span class="string">"Your name is "</span> &lt;&lt; name &lt;&lt; endl;</div></pre></td></tr></table></figure></p>
+<p>当你在终端输入的的名字有空格时就不能完整的输出你的名字，输出情况如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Please input your name : Smith Edward</div><div class="line">Your name is Smith</div></pre></td></tr></table></figure></p>
+<p>在这里我们可以清楚的看到，输出的结果与我们想要的结果不同，这是为什么呢？ 查相关资料我们会发现 cin 遇到空格时会当作是输入结束的标志， 所以在本例中只能输出 Smith 。 那么我们想完整的输出我们的名字时要要怎样处理，这里要介绍行输入函数getline(),用法如下：<br>（定义还是用上面的定义，只是输入函数改为getline()）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getline( cin , name);</div></pre></td></tr></table></figure></p>
+<p>则输出的结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Please input your name : Smith Edward</div><div class="line">Your name is Smith Edward</div></pre></td></tr></table></figure></p>
+<p>在这里我们可以看到，我们的名字可以完整的输出了，所以遇到要按行输出的时候我们可以使用 Getline() 函数</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/13/c++_cin/" data-id="cj087q3su0002gkupkd3n84yq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/13/c++learning/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C++学习随笔  setw( n )
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/13/white-black/">First Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/13/Git/">GIT</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/13/vim/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/13/free-watch-movies/">免费看 VIP 电影/电视剧</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/13/create-hexo/">用Github搭建Hexo博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
