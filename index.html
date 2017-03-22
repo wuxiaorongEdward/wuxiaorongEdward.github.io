@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,132 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-c_record" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/22/c_record/" class="article-date">
+  <time datetime="2017-03-22T12:50:59.599Z" itemprop="datePublished">2017-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/22/c_record/">c language point</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于C语言中的执行顺序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int a=9:</div><div class="line"><span class="built_in">printf</span>(″%d,%d\n″,a , a++)；</div></pre></td></tr></table></figure></p>
+<p>执行的结果是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10  9</div></pre></td></tr></table></figure></p>
+<p>原因：答案为10，,9 不要惊慌！ 原因在于计算机会先算后者a++，即第二个数为9<br>此后a为10，再算第一个数为10，最后输出10,9<br>你可能要问为什么先算第二个？<br>原因在于：数据在栈结构中，像弹夹一样，先进后出，压站顺序呢由左往右，所以先算第二个！<br>另外悄悄告诉你：这个顺序也不是绝度的，是由编译器定的！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/22/c_record/" data-id="cj0kz3ef70000roupy2zankxl" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/14/test/" class="article-date">
+  <time datetime="2017-03-14T11:48:26.596Z" itemprop="datePublished">2017-03-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/14/test/">test of Markdown syntax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="title1"><a href="#title1" class="headerlink" title="title1"></a>title1</h1><h2 id="title2"><a href="#title2" class="headerlink" title="title2"></a>title2</h2><h3 id="title3"><a href="#title3" class="headerlink" title="title3"></a>title3</h3><p>out of order</p>
+<ul>
+<li>1</li>
+<li>2</li>
+</ul>
+<p>order</p>
+<ol>
+<li>you</li>
+<li>and</li>
+<li>me</li>
+</ol>
+<blockquote>
+<p>this is a quotation<br>    notice the tifference</p>
+</blockquote>
+<p> <a href="http://www.baidu.com" target="_blank" rel="external">Baidu</a><br> <img src="/img/car.jpg" alt="wxy"></p>
+<p> <strong>You are good !</strong><br> <em>OK</em></p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+</tbody>
+</table>
+<p> `</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main()
+{
+    printf(&quot;Hello World !&quot;);
+    return 0;
+}`
+</code></pre><p><strong><em>END</em></strong></p>
+<p><strong><em>MENU</em></strong></p>
+<ol>
+<li>Chinese</li>
+<li>Japan</li>
+<li>France</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/14/test/" data-id="cj09ftrvh0007d8upbhauephc" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Errors_hexo_Learning" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -91,7 +217,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/Errors_hexo_Learning/" data-id="cj088gzqm0000rsuprlgrb0qc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/Errors_hexo_Learning/" data-id="cj09ftrv10000d8upuslfhfe2" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -129,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/white-black/" data-id="cj088gzrt0008rsupy82xax8h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/white-black/" data-id="cj09ftrvw0009d8up7qjfy1ds" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -169,7 +295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/Git/" data-id="cj088gzqv0001rsuptrnswvgo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/Git/" data-id="cj09ftrv10002d8up4w0fcf27" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -206,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/vim/" data-id="cj088gzrk0007rsup7duwv6e7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/vim/" data-id="cj09ftrvw0008d8upx45i0zo7" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -244,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/free-watch-movies/" data-id="cj088gzrd0005rsupf54iqath" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/free-watch-movies/" data-id="cj09ftrvh0005d8upzw25p8lp" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -287,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/create-hexo/" data-id="cj088gzr50004rsupi1g77mys" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/create-hexo/" data-id="cj09ftrvh0004d8upeuk4mv2w" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -329,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/c++learning/" data-id="cj088gzr30003rsupgp9uebbl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/c++learning/" data-id="cj09ftrvh0003d8upm4ifxvzk" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -370,52 +496,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/c++_cin/" data-id="cj088gzqz0002rsupux6wx121" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/13/hello-world/" class="article-date">
-  <time datetime="2017-03-13T13:48:00.351Z" itemprop="datePublished">2017-03-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/13/hello-world/" data-id="cj088gzrh0006rsupibauo9u3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/03/13/c++_cin/" data-id="cj09ftrv10001d8upf4evlwcw" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -426,6 +507,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -440,7 +525,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
     </div>
@@ -450,9 +535,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/03/22/c_record/">c language point</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/14/test/">test of Markdown syntax</a>
+          </li>
         
           <li>
             <a href="/2017/03/13/Errors_hexo_Learning/">Error in Hexo Learning</a>
@@ -464,14 +557,6 @@
         
           <li>
             <a href="/2017/03/13/Git/">GIT</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/13/vim/">VIM</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/13/free-watch-movies/">免费看 VIP 电影/电视剧</a>
           </li>
         
       </ul>
