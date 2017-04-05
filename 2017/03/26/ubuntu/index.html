@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>add user | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在ubuntu中添加用户， 关于 useradd 和  adduser  的用法和区别。
+adduser首先我们来看看如何用 adduser  添加用户：  
+1234567891011121314添加用户 ‘username’ ...添加新用户组  添加新用户到新用户组复制用户文件输入密码：再输入一次密码：密码设置成功修改用户的信息输入新的，或者按回车键默认     全名：	 房间号：	 工作号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="add user">
+<meta property="og:url" content="http://yoursite.com/2017/03/26/ubuntu/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在ubuntu中添加用户， 关于 useradd 和  adduser  的用法和区别。
+adduser首先我们来看看如何用 adduser  添加用户：  
+1234567891011121314添加用户 ‘username’ ...添加新用户组  添加新用户到新用户组复制用户文件输入密码：再输入一次密码：密码设置成功修改用户的信息输入新的，或者按回车键默认     全名：	 房间号：	 工作号">
+<meta property="og:image" content="http://yoursite.com/img/adduser.png">
+<meta property="og:image" content="http://yoursite.com/img/useradd.png">
+<meta property="og:updated_time" content="2017-03-25T17:03:54.682Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="add user">
+<meta name="twitter:description" content="在ubuntu中添加用户， 关于 useradd 和  adduser  的用法和区别。
+adduser首先我们来看看如何用 adduser  添加用户：  
+1234567891011121314添加用户 ‘username’ ...添加新用户组  添加新用户到新用户组复制用户文件输入密码：再输入一次密码：密码设置成功修改用户的信息输入新的，或者按回车键默认     全名：	 房间号：	 工作号">
+<meta name="twitter:image" content="http://yoursite.com/img/adduser.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/26/ubuntu/" class="article-date">
+  <time datetime="2017-03-25T16:03:04.919Z" itemprop="datePublished">2017-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      add user
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在ubuntu中添加用户， 关于 <strong>useradd</strong> 和 <strong> adduser </strong> 的用法和区别。</p>
+<h3 id="adduser"><a href="#adduser" class="headerlink" title="adduser"></a>adduser</h3><p>首先我们来看看如何用 <strong>adduser </strong> 添加用户：<br>  <img src="/img/adduser.png" width="70%" height="30%"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">添加用户 ‘username’ ...</div><div class="line">添加新用户组  </div><div class="line">添加新用户到新用户组</div><div class="line">复制用户文件</div><div class="line">输入密码：</div><div class="line">再输入一次密码：</div><div class="line">密码设置成功</div><div class="line">修改用户的信息</div><div class="line">输入新的，或者按回车键默认</div><div class="line">     全名：</div><div class="line">	 房间号：</div><div class="line">	 工作号码：</div><div class="line">	 其他的：</div><div class="line">填入的信息是否正确？</div></pre></td></tr></table></figure>
+<p>###useradd<br>使用useradd来创建用户<br>   <img src="/img/useradd.png" width="70%" height="30%"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd username</div></pre></td></tr></table></figure></p>
+<p>使用useradd需要自己去配置相关信息， 如下：<br>（1） -d：           指定用户的主目录<br>（2） -m：          如果存在不再创建，但是此目录并不属于新创建用户；如果主目录不存在，则强制创建； -m和-d一块使用。<br>（3） -s：           指定用户登录时的shell版本<br>（4） -M：           不创建主目录</p>
+<p><strong>区别</strong><br> <strong>adduser</strong>会自动配置相关信息，并且在 /home目录下创建用户目录，而<strong>useradd</strong>则不会创建。<br>使用以下命令可以查看：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls /home</div></pre></td></tr></table></figure></p>
+<h2 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h2><p><strong>passwd</strong>给用户添加密码和修改，与<strong>usermod</strong> 的区别在于 usermod 修改密码后是明码，所以最好不要用usermod 修改密码，在/etc/shadow 中可以看到密码。</p>
+<h2 id="userdel"><a href="#userdel" class="headerlink" title="userdel"></a>userdel</h2><p>userdel删除用户，只有一个参数 -r ，表示同时删除 /home 目录下的相关文件</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/26/ubuntu/" data-id="cj159sh240009xwuphko1gow3" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/06/minyao/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          民谣真的变味了吗
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/22/c_record/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">c language point</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/06/minyao/">民谣真的变味了吗</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/ubuntu/">add user</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/c_record/">c language point</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/14/test/">test of Markdown syntax</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/13/Errors_hexo_Learning/">Error in Hexo Learning</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

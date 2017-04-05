@@ -15,7 +15,7 @@
 <meta property="og:description" content="关于C语言中的执行顺序12int a=9:printf(″%d,%d\n″,a , a++)；
 执行的结果是110  9
 原因：答案为10，,9 不要惊慌！ 原因在于计算机会先算后者a++，即第二个数为9此后a为10，再算第一个数为10，最后输出10,9你可能要问为什么先算第二个？原因在于：数据在栈结构中，像弹夹一样，先进后出，压站顺序呢由左往右，所以先算第二个！另外悄悄告诉你：这个顺序也不是绝度">
-<meta property="og:updated_time" content="2017-03-22T12:58:29.651Z">
+<meta property="og:updated_time" content="2017-03-23T08:49:15.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c language point">
 <meta name="twitter:description" content="关于C语言中的执行顺序12int a=9:printf(″%d,%d\n″,a , a++)；
@@ -58,9 +58,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -94,11 +94,21 @@
         <p>关于C语言中的执行顺序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int a=9:</div><div class="line"><span class="built_in">printf</span>(″%d,%d\n″,a , a++)；</div></pre></td></tr></table></figure></p>
 <p>执行的结果是<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">10  9</div></pre></td></tr></table></figure></p>
 <p>原因：答案为10，,9 不要惊慌！ 原因在于计算机会先算后者a++，即第二个数为9<br>此后a为10，再算第一个数为10，最后输出10,9<br>你可能要问为什么先算第二个？<br>原因在于：数据在栈结构中，像弹夹一样，先进后出，压站顺序呢由左往右，所以先算第二个！<br>另外悄悄告诉你：这个顺序也不是绝度的，是由编译器定的！</p>
+<h3 id="C语言二级考试细节"><a href="#C语言二级考试细节" class="headerlink" title="C语言二级考试细节"></a>C语言二级考试细节</h3><ol>
+<li>数组名做为实参传递， 当作数组首地址处理</li>
+<li>数组的首地址是常量，是不可以被赋值的</li>
+<li>指针类型是绝对不可以做加法</li>
+<li>c语言中未经初始化的变量的值是不可知的</li>
+<li>若二维数组a有m列,则在a[i][j]前的元素个数为(  )</li>
+<li>strcmp函数用于比较两个字符串是否相等，若s2与s1一样，则返回值为0，若s1&gt;s1返回大于0的数字</li>
+<li>全局变量未经初始化默认赋值为0</li>
+<li>函数返回值可以和普通值一样，可以出现表达式中，也可以作为函数实参，但不可以作为形参</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/03/22/c_record/" data-id="cj0kz3ef70000roupy2zankxl" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/03/22/c_record/" data-id="cj159sh1o0005xwup0wvveugm" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -107,9 +117,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/03/26/ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          add user
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/03/14/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">test of Markdown syntax</div>
     </a>
   
@@ -132,9 +151,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
     </div>
   </div>
 
@@ -142,9 +161,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/04/06/minyao/">民谣真的变味了吗</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/26/ubuntu/">add user</a>
+          </li>
         
           <li>
             <a href="/2017/03/22/c_record/">c language point</a>
@@ -156,14 +183,6 @@
         
           <li>
             <a href="/2017/03/13/Errors_hexo_Learning/">Error in Hexo Learning</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/13/white-black/">First Hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/13/Git/">GIT</a>
           </li>
         
       </ul>
@@ -179,7 +198,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
@@ -201,6 +220,7 @@
 
 
 <script src="/js/script.js"></script>
+
 
   </div>
 </body>
