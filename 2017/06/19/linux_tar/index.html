@@ -92,24 +92,22 @@
 
 
 
-<meta name="description" content="其实我并不是一个喜欢写东西的人，有时候仅仅是在手机上记下自己的一些小想法，可是最近和朋友聊了一两句关于民谣的事，我发现她对民谣的还是很了解的，不过她说现在开始不喜欢民谣啦，我想原因可能大家都能猜到的，这里我就不多说了，在这里我只是想谈谈我的想法。
-民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了 对于这个问题，我刚好在网上看到了一张图片，就先上图啦  我不知道你们是否同意上面对这种现象的分">
+<meta name="description" content="我们都知道在网络上传文件的时候都喜欢先把文件打包压缩，压缩可以使文件瘦身（变小）便于传输，在windows系统中我们都喜欢使用winRAR软件压缩文件，不过这个软件  可是要收费的哦。然而，在Linux系统中的压缩软件可都是免费的，听到是免费的是不是有点小激动，虽然是免费的，不过你得先学会才行，下面是我学习Linux下  压缩与解压缩的笔记。
+什么是打包压缩
+打包: 打包是指把多个文件打包成一个文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="民谣真的变味了吗">
-<meta property="og:url" content="http://yoursite.com/2017/04/06/minyao/index.html">
+<meta property="og:title" content="Linux命令下打包压缩文件">
+<meta property="og:url" content="http://yoursite.com/2017/06/19/linux_tar/index.html">
 <meta property="og:site_name" content="Never Give Up">
-<meta property="og:description" content="其实我并不是一个喜欢写东西的人，有时候仅仅是在手机上记下自己的一些小想法，可是最近和朋友聊了一两句关于民谣的事，我发现她对民谣的还是很了解的，不过她说现在开始不喜欢民谣啦，我想原因可能大家都能猜到的，这里我就不多说了，在这里我只是想谈谈我的想法。
-民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了 对于这个问题，我刚好在网上看到了一张图片，就先上图啦  我不知道你们是否同意上面对这种现象的分">
-<meta property="og:image" content="http://yoursite.com/img/minyao.jpg">
-<meta property="og:image" content="http://yoursite.com/img/fangao.jpg">
-<meta property="og:image" content="http://yoursite.com/img/lixiansanxun.jpg">
-<meta property="og:image" content="http://yoursite.com/img/lixian.jpg">
-<meta property="og:updated_time" content="2017-04-05T17:49:57.019Z">
+<meta property="og:description" content="我们都知道在网络上传文件的时候都喜欢先把文件打包压缩，压缩可以使文件瘦身（变小）便于传输，在windows系统中我们都喜欢使用winRAR软件压缩文件，不过这个软件  可是要收费的哦。然而，在Linux系统中的压缩软件可都是免费的，听到是免费的是不是有点小激动，虽然是免费的，不过你得先学会才行，下面是我学习Linux下  压缩与解压缩的笔记。
+什么是打包压缩
+打包: 打包是指把多个文件打包成一个文">
+<meta property="og:updated_time" content="2017-06-19T11:40:29.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="民谣真的变味了吗">
-<meta name="twitter:description" content="其实我并不是一个喜欢写东西的人，有时候仅仅是在手机上记下自己的一些小想法，可是最近和朋友聊了一两句关于民谣的事，我发现她对民谣的还是很了解的，不过她说现在开始不喜欢民谣啦，我想原因可能大家都能猜到的，这里我就不多说了，在这里我只是想谈谈我的想法。
-民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了 对于这个问题，我刚好在网上看到了一张图片，就先上图啦  我不知道你们是否同意上面对这种现象的分">
-<meta name="twitter:image" content="http://yoursite.com/img/minyao.jpg">
+<meta name="twitter:title" content="Linux命令下打包压缩文件">
+<meta name="twitter:description" content="我们都知道在网络上传文件的时候都喜欢先把文件打包压缩，压缩可以使文件瘦身（变小）便于传输，在windows系统中我们都喜欢使用winRAR软件压缩文件，不过这个软件  可是要收费的哦。然而，在Linux系统中的压缩软件可都是免费的，听到是免费的是不是有点小激动，虽然是免费的，不过你得先学会才行，下面是我学习Linux下  压缩与解压缩的笔记。
+什么是打包压缩
+打包: 打包是指把多个文件打包成一个文">
 
 
 
@@ -137,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/06/minyao/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/19/linux_tar/"/>
 
 
 
 
 
-  <title>民谣真的变味了吗 | Never Give Up</title>
+  <title>Linux命令下打包压缩文件 | Never Give Up</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/06/minyao/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/linux_tar/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Edward Wu">
@@ -299,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">民谣真的变味了吗</h1>
+          <h1 class="post-title" itemprop="name headline">Linux命令下打包压缩文件</h1>
         
 
         <div class="post-meta">
@@ -311,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-06T00:18:25+08:00">
-                2017-04-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:22+08:00">
+                2017-06-19
               </time>
             
 
@@ -346,22 +344,36 @@
       
 
       
-        <p>其实我并不是一个喜欢写东西的人，有时候仅仅是在手机上记下自己的一些小想法，可是最近和朋友聊了一两句关于民谣的事，我发现她对民谣的还是很了解的，不过她说现在开始不喜欢民谣啦，我想原因可能大家都能猜到的，这里我就不多说了，在这里我只是想谈谈我的想法。</p>
-<h4 id="民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了"><a href="#民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了" class="headerlink" title="民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了"></a>民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了</h4><p> 对于这个问题，我刚好在网上看到了一张图片，就先上图啦<br>  <img src="/img/minyao.jpg" width="80%" height="20%"><br>我不知道你们是否同意上面对这种现象的分析，不过我觉的还是有一定的道理的。的确，民谣这几年在中国是越来越火了，开始从小众音乐变成主流音乐，被越来越多的人接受，可是有些人开始担心当民谣歌手出名后，他们为了迎合大众的喜好，为了获得利益，他们的音乐是为了商业目的。我不敢说这种担心是没有必要的，或许会有极少的民谣歌手会这样做，但我绝对相信大多数歌手是不会这样做的，因为他们并不是为了生存而去搞音乐，他们是真的爱音乐，可以说音乐就是他们人生的一部分。他们的每一首歌唱的不仅仅是他们对于生活、理想的感悟，同时也寄托我们这些热爱着民谣的心声。正是应为如此，相信虽然他们现在变得出名了，但是他们的音乐是没有变的。</p>
-<h4 id="我为什么喜欢民谣"><a href="#我为什么喜欢民谣" class="headerlink" title="我为什么喜欢民谣"></a>我为什么喜欢民谣</h4><p>在我看来，每一首歌都在讲述一个故事，而每一个故事都是感人的，而且激励着我们前进，这就是为什么我会喜欢带上耳机，安静的听着他们的声音，高晓松的《同桌的你》，老狼的《恋恋风尘》，好妹妹乐队的《你究竟有几个好妹妹》，赵雷的《成都》、《理想》、《南方姑娘》等，每一首歌都在自己的歌单里不知道循环听了多少遍。无论时间如何带走青春，现实怎样吞噬浪漫，民谣的味道依旧。我们不会因为现实的冷漠而放弃自己的理想，我们只会更加坚信理想是不会向现实低头的，民谣不变，他让你变成真实的自己，去深爱着别人</p>
-<p><img src="/img/fangao.jpg" width="60%" height="10%"></p>
+        <p>我们都知道在网络上传文件的时候都喜欢先把文件打包压缩，压缩可以使文件瘦身（变小）便于传输，在windows系统中我们都喜欢使用winRAR软件压缩文件，不过这个软件  可是要收费的哦。然而，在Linux系统中的压缩软件可都是免费的，听到是免费的是不是有点小激动，虽然是免费的，不过你得先学会才行，下面是我学习Linux下  压缩与解压缩的笔记。</p>
+<h3 id="什么是打包压缩"><a href="#什么是打包压缩" class="headerlink" title="什么是打包压缩"></a>什么是打包压缩</h3><ul>
+<li><strong>打包</strong>: 打包是指把多个文件打包成一个文件</li>
+<li><strong>压缩</strong>：压缩简单的说就是为一个文件瘦身，使文件变小便于传输</li>
+</ul>
+<h3 id="Linux命令下打包压缩文件"><a href="#Linux命令下打包压缩文件" class="headerlink" title="Linux命令下打包压缩文件"></a>Linux命令下打包压缩文件</h3><p>linux系统下有很多有用的压缩命令，比如 <strong>compress、  gzip 、 bzip 、 tar</strong>， 接下来我会一一介绍它们的用法</p>
+<p>开始详细介绍之前，我们先来介绍一下Linux的环境中，压缩文件的扩展名，以及它们的压缩程序：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*.Z:       compress程序压缩的文件</div><div class="line">*.gz:      gzip程序压缩的文件</div><div class="line">*.bz2      bzip2程序压缩的文件</div><div class="line">*.tar      tar程序打包的文件，并没有压缩</div><div class="line">*.tar.gz   tar程序打包后，由gzip程序压缩</div><div class="line">*.tar.bz2  tar程序打包后，由bzip2程序压缩</div></pre></td></tr></table></figure></p>
+<h4 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h4><p>compress 目前只存在一些老的UNIX系统中，compress程序压缩大的文件的后缀为“ <strong>.Z</strong> ”, 现在都不用了，因为<strong>gzip</strong>可以解压 .Z 压缩包，而compress程序不可以解压其他的文件，所以i这里我们只是了解一下，感兴趣的话也可以自己去安装这个程序尝试用一下，不感兴趣的可以直接跳过这一部分。<br>安装compress程序：(我的Linux环境为 Ubuntu)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install ncompress</div></pre></td></tr></table></figure></p>
+<p><strong>Usage:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">compress [option] filename or directory</div><div class="line">option: -v -c -r</div><div class="line">-r: 连同目录下的文件一起压缩</div><div class="line">-c:  把压缩的数据打印到屏幕上，但不压缩成压缩包，如果要压缩成压缩包则使用输出重定向 compress -c filename &gt; filename.Z</div><div class="line">-v: 压缩时显示压缩信息</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>: 此程序压缩时是针对一个文件或一个目录，默认情况下在压缩时会删除原来的文件。</p>
+<p>解压：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">uncompress filename.Z</div></pre></td></tr></table></figure></p>
+<p>同样的，在解压后默认也会删除.Z 文件</p>
+<h4 id="gzip-zcat"><a href="#gzip-zcat" class="headerlink" title="gzip  zcat"></a>gzip  zcat</h4><p>gzip是目前用的比较多的压缩软件，它可以打开compress, zip, gzip 等软件压缩的文件，使用上同compress程序压缩文件很相似，gzip压缩的文件的后缀是：.gz ,下面来看一下它的用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">option: -v -c -d -t </div><div class="line">-c , -v 的用法同compress</div><div class="line">-d: 解压的参数</div><div class="line">-t: 检查一个压缩文件的一致性，看看文件有没有错误</div><div class="line"></div><div class="line">**Examples**</div><div class="line">将 ~/newfile 用gzip压缩，然后再解压</div><div class="line">压缩：gzip -v newfile</div><div class="line">解压：gzip -d newfile.gz</div></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>：gzip 压缩和解压都会删除相应原来的文件。<br>当你压缩的是一个文本文件时，你可以用 <strong>zcat</strong> 查看文件的内容。</p>
+<h4 id="bzip2-bzcat"><a href="#bzip2-bzcat" class="headerlink" title="bzip2  bzcat"></a>bzip2  bzcat</h4><p>bzip2 的压缩效果比gzip的好，压缩的文件的后缀名为 .bz2, 用法同gzip的基本相同：</p>
+<pre><code>bzip2 [option] filename
+option: -cdkzv
+-c,-d,-v: 同上面的gzip的用法
+-k： 保留原文件，而不会删除原始文件
+-z:压缩的参数
+</code></pre><h4 id="tar-打包软件"><a href="#tar-打包软件" class="headerlink" title="tar 打包软件"></a>tar 打包软件</h4><p>tar软件起初只是一个打包的软件，并不能压缩文件，所以得先打包然后再压缩，不过其实大多数人是比较懒的，于是聪明的程序猿就把gzip, bzip2软件加入到了tar软件中，tar软件的打包压缩功能比较多，这里我们只了解比较常用的几个功能，其他的功能，你们可以给这个软件找一个男人看一下（man tar）: </p>
 <blockquote>
-<p>让我在看你一眼<br>    星空和黑夜<br>    西去而盘旋的飞鸟<br>    我们生来就是孤独<br>              —《梵高先生》</p>
+<p>tar [option] filename[*]<br>  option: -c -f -v -z -j -t -x<br>  -c: 新建打包的文件，与-f 搭配用，需要指明打包的文件名,后缀名.tar<br>  -t: 查看打包的文件中有哪些文件，主要是查看文件名<br>  -j: 通过bzip2程序打包压缩/解压，此时文件名最好为.tar.bz2<br>  -z：通过gzip打包压缩/解压 ，此时文件名为.tar.gz<br>  -x: 解压文件时用</p>
 </blockquote>
-<p><img src="/img/lixiansanxun.jpg" width="60%" height="10%"></p>
+<ul>
+<li>解压单一文件：<br>当一个压缩文件中有很多文件，但我们只解压其中的一个文件，可以这样做：</li>
+</ul>
 <blockquote>
-<p>青春又醉倒在<br>    籍籍无名的杯<br>    靠嘻笑来虚度 聚散得慷慨<br>    辗转却去不到 对的站台<br>              —《理想三旬》</p>
+<p>tar -jtv  -f filename.tar.bz2 | grep ‘目标文件’  找到文件<br>解压： tar -jxv -f filename.tar.bz2  待解压文件</p>
 </blockquote>
-<p><img src="/img/lixian.jpg" width="60%" height="10%"></p>
-<blockquote>
-<p>理想永远年轻<br>    你让我倔强的反抗命运<br>    你让我变的苍白<br>    却依然天真的相信花儿会再次的盛开<br>            —《理想》</p>
-</blockquote>
-<h4 id="好电台推荐"><a href="#好电台推荐" class="headerlink" title="好电台推荐"></a>好电台推荐</h4><p> 我收听民谣主要是在<strong>网易云音乐</strong>上的<strong>主播电台</strong>下的<strong>音乐故事</strong>，里面有几个好的电台，<em>音乐咖啡屋</em>、<em>淘漉音乐</em>、<em>民谣在路上</em>， 我个人觉得还是很不错的，希望你也喜欢。</p>
 
       
     </div>
@@ -398,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/26/ubuntu/" rel="next" title="add user">
-                <i class="fa fa-chevron-left"></i> add user
+              <a href="/2017/05/12/c++programming/" rel="next" title="像计算机科学家一样的思考">
+                <i class="fa fa-chevron-left"></i> 像计算机科学家一样的思考
               </a>
             
           </div>
@@ -407,10 +419,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/11/string/" rel="prev" title="usage of string">
-                usage of string <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了"><span class="nav-number">1.</span> <span class="nav-text">民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#我为什么喜欢民谣"><span class="nav-number">2.</span> <span class="nav-text">我为什么喜欢民谣</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#好电台推荐"><span class="nav-number">3.</span> <span class="nav-text">好电台推荐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是打包压缩"><span class="nav-number">1.</span> <span class="nav-text">什么是打包压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux命令下打包压缩文件"><span class="nav-number">2.</span> <span class="nav-text">Linux命令下打包压缩文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#compress"><span class="nav-number">2.1.</span> <span class="nav-text">compress</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gzip-zcat"><span class="nav-number">2.2.</span> <span class="nav-text">gzip  zcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bzip2-bzcat"><span class="nav-number">2.3.</span> <span class="nav-text">bzip2  bzcat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tar-打包软件"><span class="nav-number">2.4.</span> <span class="nav-text">tar 打包软件</span></a></li></ol></li></ol></div>
             
 
           </div>
