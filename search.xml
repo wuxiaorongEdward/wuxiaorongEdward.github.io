@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[shell script 的执行方式和区别]]></title>
+    <url>%2F2017%2F08%2F05%2Fshell_perform%2F</url>
+    <content type="text"><![CDATA[以前在写shell编程的时候提到过shell脚本的执行方式，由于当时水平有限，有一些问题可能没有说清楚。正好我最近在学习shell script ，正好完善一下以前不懂得地方。前面的文章[shell编程]: http://wuxiaorong.coding.me/2017/05/08/shell/ 执行方式 主要有三种执行方式，而且每一种的执行方式是有区别的，造成的结果也相同。 利用直接执行的方式来执行shell script 当使用直接执行的方式执行时，必须的条件是脚本要有执行权限，且在脚本中要指明用什么shell执行，也就是脚本开头的那一行#!/bin/bash,我这里使用的是bash, 当然你也可以使用其他的shell。执行方式： 12chmod +x filename.sh ./filename.sh 使用shell环境执行这种方式是直接调用使用shell执行，执行方式： 1bash filename.sh 利用source执行，在父进程中执行（. 与source 有相同的功能），执行方式; 12source filename.sh . filename.sh 区别 这三种执行方式的区别主要是执行的环境不同，前两中的执行环境是在子进程中执行，后一种是在父进程中执行。或许说得你迷迷糊糊的，当时我也是如此，其实我们用图可以更好地表达： 问题 当时我是用source执行脚本是会退出终端，一开始不知道怎么回事，经过上网查，发现我的脚本中有一行exit 0,当在父进程中执行时到exit 0 时，会退出父进程的终端。在子进程中执行时也会退出，只不过还有父进程的终端，所以终端还在。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu 中 HISTSIZE 、 HISTFILESIZE 、HISTTIMEFORMAT 的设置]]></title>
+    <url>%2F2017%2F07%2F16%2Fhistsize_bashrc%2F</url>
+    <content type="text"><![CDATA[配置文件在./.bashrc HISTSIZE 当你的bash环境在运行时能够储存的命令的行数（默认为1000），这些命令只有当你注销后才能保存到历史文件./.bash_history中 HISTFILESIZE（默认为2000） 指历史文件（./.bash_history）中能够存储的命令的夯实 HISTTIMEFORMAT 设置显示格式，调用history时也要显示时间戳]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[关于excel文件的密码破解]]></title>
+    <url>%2F2017%2F07%2F06%2Fbroken_passwd_excel%2F</url>
+    <content type="text"><![CDATA[前言： 我在网上查了一下，发现破解的方法有两种，一种是使用excel的定义宏破解，另一种是用软件破解。我尝试了用网上的方法使用宏破解，但是都不成功，所以我选择了使用软件破解，使用的软件为 Advanced Office Passord Recovery。 网盘下载地址：链接：https://pan.baidu.com/s/1eS6BJLw 密码: cgym 方法如下： 下载破解软件从网盘下载好软件后可以存放在任何位置（我先放在桌面）： 安装软件双击上面的软件（.exe）,出现下面的安装界面，选择默认安装就可以了，选择一个容易找到的安装目录，方便不用的时候可以直接删掉：等待。。。。。当出现下面的界面时，把设置999网址导航前面的对勾去掉，不然它会给你安装一些附加的软件，只保留运行软件：到此安装就完成了： 破解excel文件的密码打开桌面的 Advanced Office Password Recovery。点击 打开文件 导入你要破解的excel文件，出现下面的界面就有了文件对应的密码； 输入密码打开文件打开excel文件的信息，点击取消保护，弹出密码对话框，填入上面破解的密码就可以编辑文件了： 永久删除软件打开安装软件的目录，点击Uninst.exe就可以删除软件了]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[不用安装各种软件，而且可以翻墙的工具]]></title>
+    <url>%2F2017%2F07%2F05%2Fuzerme%2F</url>
+    <content type="text"><![CDATA[网站地址：云端超级运用空间https://uzer.me 首先我们先来介绍一下它的一些基本情况：uzer.me超级云端应用空间给你一种全新的软件运用方式，它提供的所有软件浏览器都是免安装不占用本地内存的，还提供了实时分享，与他人协作的功能。更为特别的是该网站还是一个翻墙的工具，在这里你可以google查资料，还可以上youtube看视屏，看mv， 听歌。它就是一个云端电脑，可以释放自己的PC的内存。在本人看来，你值得知道并了解使用这个软件。接下来我就简单的介绍一下这个这个网站的使用。 开始之前： 首先你要在你本地的浏览器中登入网站云端超级运用空间，注册一个账号，这里可以用手机或则邮箱注册。 登录运用： 注册完之后登录，你就可以看到主页面上有很多的软件,主要分为五个部分：办公软件，设计绘图，浏览器，办公效率，娱乐休闲。任何一个软件都是在线使用的，当你完成后可以保存在网上，也可以保存在本地。还有一个特别的是你可以与他人协作，可以实时交流完成工作。可以说是非常使用的一个网站：主页面如下图： 翻墙工具： 我个人觉得这个网站还有一个特别的地方是可以翻墙，他不像其他的翻墙工具需要代理服务器，在这里你可以直接翻墙上google,youtube等，无论是用来查资料，还是用来看视频、听歌学英语都是很方便的。使用方法也很简单：直接打开浏览器中的Firefox或者Chrome都可以，然后就和我们平时使用浏览器的方法一样了，输入网址你就可以看看外面的世界了： 就是这么方便，尽情的使用吧。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux命令下打包压缩文件]]></title>
+    <url>%2F2017%2F06%2F19%2Flinux_tar%2F</url>
+    <content type="text"><![CDATA[我们都知道在网络上传文件的时候都喜欢先把文件打包压缩，压缩可以使文件瘦身（变小）便于传输，在windows系统中我们都喜欢使用winRAR软件压缩文件，不过这个软件 可是要收费的哦。然而，在Linux系统中的压缩软件可都是免费的，听到是免费的是不是有点小激动，虽然是免费的，不过你得先学会才行，下面是我学习Linux下 压缩与解压缩的笔记。 什么是打包压缩 打包: 打包是指把多个文件打包成一个文件 压缩：压缩简单的说就是为一个文件瘦身，使文件变小便于传输 Linux命令下打包压缩文件linux系统下有很多有用的压缩命令，比如 compress、 gzip 、 bzip 、 tar， 接下来我会一一介绍它们的用法 开始详细介绍之前，我们先来介绍一下Linux的环境中，压缩文件的扩展名，以及它们的压缩程序：123456*.Z: compress程序压缩的文件*.gz: gzip程序压缩的文件*.bz2 bzip2程序压缩的文件*.tar tar程序打包的文件，并没有压缩*.tar.gz tar程序打包后，由gzip程序压缩*.tar.bz2 tar程序打包后，由bzip2程序压缩 compresscompress 目前只存在一些老的UNIX系统中，compress程序压缩大的文件的后缀为“ .Z ”, 现在都不用了，因为gzip可以解压 .Z 压缩包，而compress程序不可以解压其他的文件，所以i这里我们只是了解一下，感兴趣的话也可以自己去安装这个程序尝试用一下，不感兴趣的可以直接跳过这一部分。安装compress程序：(我的Linux环境为 Ubuntu)1sudo apt-get install ncompress Usage:12345compress [option] filename or directoryoption: -v -c -r-r: 连同目录下的文件一起压缩-c: 把压缩的数据打印到屏幕上，但不压缩成压缩包，如果要压缩成压缩包则使用输出重定向 compress -c filename &gt; filename.Z-v: 压缩时显示压缩信息 注意: 此程序压缩时是针对一个文件或一个目录，默认情况下在压缩时会删除原来的文件。 解压：1uncompress filename.Z 同样的，在解压后默认也会删除.Z 文件 gzip zcatgzip是目前用的比较多的压缩软件，它可以打开compress, zip, gzip 等软件压缩的文件，使用上同compress程序压缩文件很相似，gzip压缩的文件的后缀是：.gz ,下面来看一下它的用法：123456789option: -v -c -d -t -c , -v 的用法同compress-d: 解压的参数-t: 检查一个压缩文件的一致性，看看文件有没有错误**Examples**将 ~/newfile 用gzip压缩，然后再解压压缩：gzip -v newfile解压：gzip -d newfile.gz 注意：gzip 压缩和解压都会删除相应原来的文件。当你压缩的是一个文本文件时，你可以用 zcat 查看文件的内容。 bzip2 bzcatbzip2 的压缩效果比gzip的好，压缩的文件的后缀名为 .bz2, 用法同gzip的基本相同： bzip2 [option] filename option: -cdkzv -c,-d,-v: 同上面的gzip的用法 -k： 保留原文件，而不会删除原始文件 -z:压缩的参数 tar 打包软件tar软件起初只是一个打包的软件，并不能压缩文件，所以得先打包然后再压缩，不过其实大多数人是比较懒的，于是聪明的程序猿就把gzip, bzip2软件加入到了tar软件中，tar软件的打包压缩功能比较多，这里我们只了解比较常用的几个功能，其他的功能，你们可以给这个软件找一个男人看一下（man tar）: tar [option] filename[*] option: -c -f -v -z -j -t -x -c: 新建打包的文件，与-f 搭配用，需要指明打包的文件名,后缀名.tar -t: 查看打包的文件中有哪些文件，主要是查看文件名 -j: 通过bzip2程序打包压缩/解压，此时文件名最好为.tar.bz2 -z：通过gzip打包压缩/解压 ，此时文件名为.tar.gz -x: 解压文件时用 解压单一文件：当一个压缩文件中有很多文件，但我们只解压其中的一个文件，可以这样做： tar -jtv -f filename.tar.bz2 | grep ‘目标文件’ 找到文件解压： tar -jxv -f filename.tar.bz2 待解压文件]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[像计算机科学家一样的思考]]></title>
+    <url>%2F2017%2F05%2F12%2Fc%2B%2Bprogramming%2F</url>
+    <content type="text"><![CDATA[编程语言这里使用的编程语言是C++，C++以及其他的C、Pascal等语言都是属于高级语言，有高级语言也就相对的有低级语言 ，低级语言也称为汇编语言或者机器语言，而计算机只能识别低级语言，那为什么我们还要学习高级语言。首先高级语言便于 编写，且有较好的移植性，但它也有缺点，就是高级语言必须经过解释或者编译之后才能被计算机识别。 解释是解释一条语句执行一条语句，而编译是把所有的程序语句都编译成机器码之后再一起执行。 高级语言写的代码称为源代码，而经过解释和编译后的程序称为目标代码或可执行代码。 程序 程序：一组计算机指令序列，每一种语言都有如下几种功能：输入、输出、数学运算、测试、重复 调试 编写程序时难免会出现错误，而发现错误的过程就是调试，debugging 编译时错误编译器只能编译正确的程序，当出现语法错误时就会编译失败。 运行时错误 程序能正常执行，但是得出的结果与预期的结果不对，这时就需要调试，以便得出想要的结果。 第一个程序 打印Hello, World :1234567#include&lt;iostream&gt;using namespace;int main()&#123; cout &lt;&lt; &quot;Hello,World&quot; &lt;&lt;endl; return 0;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[shell 编程学习]]></title>
+    <url>%2F2017%2F05%2F08%2Fshell%2F</url>
+    <content type="text"><![CDATA[shell 编程像其他编程语言一样，同样遵循一些语法，同时要了解shell和shell编程是有区别的。 First shell按照我们学习编程的经历，编的第一个程序都是打印Hello world, “你好，世界 ！”，所以我们也是从这个程序开始。12#!/bin/bashecho &apos;Hello world !&apos; compile/riun the programming在LINUX环境下编译 shell 程序有三种方法： 1 使用 chmod +x 赋予该程序的可执行权限，然后直接执行。 2 使用你使用的命令解释 bash执行， bash filename。 3 使用source, source filename, (或者使用 . 代替 source ) 通常情况下, 最方便的方式就是方式1, 通过方式1执行你需要在脚本第一行写好这段脚本由哪个解释器来解释, 而通过方式2来执行则没有这个限制, 写了也没用.除此之外方式1与方式2执行命令就没有区别了, 但方式3执行的方式与前两种都不同: 使用source执行shell脚本时, 不会创建子进程, 而是在父进程中直接执行! variable 变量在shell语言中同样有变量这一概念，但shell中的变量与其他语言中的变量又有区别： 1 在shell中变量只针对字符串这一概念 2 字符串的长度的限制 3 字符串也可以进行比较等各种操作用法：1variable_name=&quot;string&quot; #在“=”的两边不要有空格 注意: 在shell 程序中注释使用的是#，其后的语句在编译时会被忽略，注释只是为了方便自己和他人阅读程序，方便程序的维护。 变量分类 1 局部变量 2 全局变量 变量的使用使用变量的格式如下：在变量名前加上美元符$12name=&apos;Edward&apos;echo $name 当执行程序时打印出来的就是字符串Edward, 变量在写程序的时候带来了极大的方便。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2017%2F05%2F07%2Ftest1%2F</url>
+    <content type="text"><![CDATA[Firstsecondthirdforthfifthsixth content testtest NAME SCORE FIRST 89 SEC Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 #include&lt;stdio.h&gt; int main() { printf(&quot;hello world !&quot;); return 0; }@(help)[first|second]]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>写作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AutoLisp]]></title>
+    <url>%2F2017%2F05%2F02%2FAutoLisp%2F</url>
+    <content type="text"><![CDATA[关于AutoLisp 学习笔记1、pline 命令 当时用pline 命令画圆弧的时候，要注意是以逆时针开始画圆顺序为：point(开始的点) —————&gt; 圆心——————&gt;另一个端点， 回车完成。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[usage of string]]></title>
+    <url>%2F2017%2F04%2F11%2Fstring%2F</url>
+    <content type="text"><![CDATA[字符串的输入1、puts() 函数 只接受一个参数，即字符串的首地址，然后输出字符串，使用puts（）函数输出是单行显示，因为puts()显示字符串是会自动在其后添加一个换行符 2、fputs()函数 fputs（）函数需要添加第二个参数，企鹅不会自动添加换行符。 3、printf()函数 格式化输出函数。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[民谣真的变味了吗]]></title>
+    <url>%2F2017%2F04%2F06%2Fminyao%2F</url>
+    <content type="text"><![CDATA[其实我并不是一个喜欢写东西的人，有时候仅仅是在手机上记下自己的一些小想法，可是最近和朋友聊了一两句关于民谣的事，我发现她对民谣的还是很了解的，不过她说现在开始不喜欢民谣啦，我想原因可能大家都能猜到的，这里我就不多说了，在这里我只是想谈谈我的想法。 民谣越来越火，为什么那些原来喜欢民谣的人开始不喜欢民谣了 对于这个问题，我刚好在网上看到了一张图片，就先上图啦 我不知道你们是否同意上面对这种现象的分析，不过我觉的还是有一定的道理的。的确，民谣这几年在中国是越来越火了，开始从小众音乐变成主流音乐，被越来越多的人接受，可是有些人开始担心当民谣歌手出名后，他们为了迎合大众的喜好，为了获得利益，他们的音乐是为了商业目的。我不敢说这种担心是没有必要的，或许会有极少的民谣歌手会这样做，但我绝对相信大多数歌手是不会这样做的，因为他们并不是为了生存而去搞音乐，他们是真的爱音乐，可以说音乐就是他们人生的一部分。他们的每一首歌唱的不仅仅是他们对于生活、理想的感悟，同时也寄托我们这些热爱着民谣的心声。正是应为如此，相信虽然他们现在变得出名了，但是他们的音乐是没有变的。 我为什么喜欢民谣在我看来，每一首歌都在讲述一个故事，而每一个故事都是感人的，而且激励着我们前进，这就是为什么我会喜欢带上耳机，安静的听着他们的声音，高晓松的《同桌的你》，老狼的《恋恋风尘》，好妹妹乐队的《你究竟有几个好妹妹》，赵雷的《成都》、《理想》、《南方姑娘》等，每一首歌都在自己的歌单里不知道循环听了多少遍。无论时间如何带走青春，现实怎样吞噬浪漫，民谣的味道依旧。我们不会因为现实的冷漠而放弃自己的理想，我们只会更加坚信理想是不会向现实低头的，民谣不变，他让你变成真实的自己，去深爱着别人 让我在看你一眼 星空和黑夜 西去而盘旋的飞鸟 我们生来就是孤独 —《梵高先生》 青春又醉倒在 籍籍无名的杯 靠嘻笑来虚度 聚散得慷慨 辗转却去不到 对的站台 —《理想三旬》 理想永远年轻 你让我倔强的反抗命运 你让我变的苍白 却依然天真的相信花儿会再次的盛开 —《理想》 好电台推荐 我收听民谣主要是在网易云音乐上的主播电台下的音乐故事，里面有几个好的电台，音乐咖啡屋、淘漉音乐、民谣在路上， 我个人觉得还是很不错的，希望你也喜欢。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[add user]]></title>
+    <url>%2F2017%2F03%2F26%2Fubuntu%2F</url>
+    <content type="text"><![CDATA[在ubuntu中添加用户， 关于 useradd 和 adduser 的用法和区别。 adduser首先我们来看看如何用 adduser 添加用户： 1234567891011121314添加用户 ‘username’ ...添加新用户组 添加新用户到新用户组复制用户文件输入密码：再输入一次密码：密码设置成功修改用户的信息输入新的，或者按回车键默认 全名： 房间号： 工作号码： 其他的：填入的信息是否正确？ ###useradd使用useradd来创建用户 1useradd username 使用useradd需要自己去配置相关信息， 如下：（1） -d： 指定用户的主目录（2） -m： 如果存在不再创建，但是此目录并不属于新创建用户；如果主目录不存在，则强制创建； -m和-d一块使用。（3） -s： 指定用户登录时的shell版本（4） -M： 不创建主目录 区别 adduser会自动配置相关信息，并且在 /home目录下创建用户目录，而useradd则不会创建。使用以下命令可以查看：1ls /home passwdpasswd给用户添加密码和修改，与usermod 的区别在于 usermod 修改密码后是明码，所以最好不要用usermod 修改密码，在/etc/shadow 中可以看到密码。 userdeluserdel删除用户，只有一个参数 -r ，表示同时删除 /home 目录下的相关文件]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[c language point]]></title>
+    <url>%2F2017%2F03%2F22%2Fc_record%2F</url>
+    <content type="text"><![CDATA[关于C语言中的执行顺序12int a=9:printf(″%d,%d\n″,a , a++)； 执行的结果是110 9 原因：答案为10，,9 不要惊慌！ 原因在于计算机会先算后者a++，即第二个数为9此后a为10，再算第一个数为10，最后输出10,9你可能要问为什么先算第二个？原因在于：数据在栈结构中，像弹夹一样，先进后出，压站顺序呢由左往右，所以先算第二个！另外悄悄告诉你：这个顺序也不是绝度的，是由编译器定的！ C语言二级考试细节 数组名做为实参传递， 当作数组首地址处理 数组的首地址是常量，是不可以被赋值的 指针类型是绝对不可以做加法 c语言中未经初始化的变量的值是不可知的 若二维数组a有m列,则在a[i][j]前的元素个数为( ) strcmp函数用于比较两个字符串是否相等，若s2与s1一样，则返回值为0，若s1&gt;s1返回大于0的数字 全局变量未经初始化默认赋值为0 函数返回值可以和普通值一样，可以出现表达式中，也可以作为函数实参，但不可以作为形参]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[test of Markdown syntax]]></title>
+    <url>%2F2017%2F03%2F14%2Ftest%2F</url>
+    <content type="text"><![CDATA[title1title2title3out of order 1 2 order you and me this is a quotation notice the tifference Baidu You are good ! OK Tables Are Cool col 3 is right-aligned $1600 col 2 is centered $12 ` #include&lt;stdio.h&gt; int main() { printf(&quot;Hello World !&quot;); return 0; }` END MENU Chinese Japan France]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Error in Hexo Learning]]></title>
+    <url>%2F2017%2F03%2F13%2FErrors_hexo_Learning%2F</url>
+    <content type="text"><![CDATA[一、关于 hexo d 出现以下问题的解决方法 遇到这个问题是这样解决的第一： 删除你hexo 下面的 .deploy_git 文件夹第二：运行1$ git config --global core.autocrlf false 第三： 重新123hexo cleanhexo githexo d 第四： 打开自己的网址，进行验证是否成功]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[First Hexo]]></title>
+    <url>%2F2017%2F03%2F13%2Fwhite-black%2F</url>
+    <content type="text"><![CDATA[welcome to my hexo. Here I will give you something new! Quick Start]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[GIT]]></title>
+    <url>%2F2017%2F03%2F13%2FGit%2F</url>
+    <content type="text"><![CDATA[2016.12 25初始化一个Git仓库，使用git init 命令1git init 添加文件到Git仓库，分两步： 第一步：使用命令 git add , 可以反复多次使用，添加多个文件； 第二步：使用名利 git commit -m “xxx” 提交完成。 xxx表示提示内容。12git add &lt;filename&gt;git commit -m "xxx" 查看当前工作区的状态，使用 git status 命令使用 git diff 告诉你修改的内容12git status git diff &lt;filename&gt; HEAD是指向当前版本的指针，HEAD^上一个版本、HEAD^^上上一个版本， 也可以用HEAD~100等。命令使用 git reset –hard commit_idgit log 可以查看历史， 以确定回到那个版本git reflog也可以查看历史]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[VIM]]></title>
+    <url>%2F2017%2F03%2F13%2Fvim%2F</url>
+    <content type="text"><![CDATA[VI 是大多数Linux distributions 的内建 text editor, vi 主要有三种模式： 一般模式 normal 、编辑模式 Insert/replace 、指令模式 command mode ，而VIM 是vi 的升级版本，但具备VI 的所有功能， 也就是说VIM 比VI更强大。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[免费看 VIP 电影/电视剧]]></title>
+    <url>%2F2017%2F03%2F13%2Ffree-watch-movies%2F</url>
+    <content type="text"><![CDATA[作为学生党，我们实在是不愿意花钱去办一个 VIP 会员，那么我们想在各大主流视频平台（如优酷、乐视、奇异、芒果、搜狐、腾讯等）上看 VIP 电影和电视剧，有没有什么好的办法而且又不花钱呢？当然有了，这个方法是我在某平台上看到的，已经试过了，的确可以看 VIP 的电影、电视剧。 方法很简单：使用地址播放，首先我们需要播放地址，然后把我们想看的视频地址放在我给的播放地址后面就可以了；如下：（“=”前面播放地址，后面的是视频地址）1234http://jx.71ki.com/index.php?url=（视频网址URL格式）支持各大主流视频平台一线http://jx.71ki.com/index.php?url=（视频网址URL格式）只支持优酷、乐视、奇异、芒果、搜狐、腾讯VIP二线http://jx1.71ki.com/index.php?url=（视频网址URL格式）支持各大主流视频平台三线http://jx2.71ki.com/index.php?url=（视频网址URL格式）支持各大主流视频平台 以上的网址都可以播放相应的视频，文字只作为说明使用，使用时打开浏览器把相应的地址输入就可以了！]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[用Github搭建Hexo博客]]></title>
+    <url>%2F2017%2F03%2F13%2Fcreate-hexo%2F</url>
+    <content type="text"><![CDATA[这是我搭建的Hexo博客，用于记录自己的学习，分享自己的想法、感悟。给自己的学习过程留下一些痕迹！希望对他人和自己都有所帮助，所以我决定把自己搭建Hexo的历程记录下来！ StartFirst Preparation安装Git : 下载mysysgit并执行即可完成安装。安装Node.js : 在Windows环境下安装Node.js,下载安装并执行即可。安装完打开（win+r）输入cmd后进入DOS命令输入:1node -v 检查环境变量是否自动配好，如果没有则需要手动配置环境变量。（具体操作百度就可以了） 安装Hexo 利用npm命令即可安装。（如果新建了链接在桌面上，直接打开 git bash 或者在任意位置鼠标右击选择git bash）,然后输入下面命令： 1npm install hexo-cli -g 创建 Hexo 文件夹在Git bash 中选择自己喜欢位置存放hexo文件夹 （如 E:\hexo），执行下面的命令就会在你选择的位置自动生成创建网站的所有文件。12hexo initnpm install 本地查看 到这里你就成功的在本地创建好 hexo 博客了。先在git bash 中切换到 hexo 文件夹，输入下面 两个命令，然后在任意浏览器输入本地地址 localhost: 4000 查看就可以了。12hexo g ( hexo generate)hexo s ( hexo server ) 注意：目前搭建的博客只是本地搭建，也就是说只有你本人能看到，其他人是不能看到的。那这就不符合我们搭建博客用于分享的目的了，别着急，接下来就要把我们的博客部署到 Github 上（前提是你要先在本地搭建好本地的博客哦！！！）]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[C++学习随笔 setw( n )]]></title>
+    <url>%2F2017%2F03%2F13%2Fc%2B%2Blearning%2F</url>
+    <content type="text"><![CDATA[About the use of setw( int n )， First the setw() is included in the header comment #include, Setw means “set the width”,it’s usually right-aliged in the field of n spaces , you can type like this :1cout &lt;&lt; setw(25) &lt;&lt; "Hello World " &lt;&lt; endl; 1Hello World If you want to set the characters being left-aligned, you can use setiosflags(ios::left). Also, you may use setfill() to fill the blanks with “*” “@” and so on, let me give an example:12cout &lt;&lt; setw(25) &lt;&lt; setiosflags(ios::left) &lt;&lt; "Hello World " &lt;&lt; endl;cout &lt;&lt; setw(25) &lt;&lt; setiosflags(ios::left) &lt;&lt; setfill('*') &lt;&lt; "Hello World " &lt;&lt; endl; you will see12Hello WorldHello World************** Decomposing makes everything easier…(分解使一切变得更容易！) About a guessing gamme First Figure out how to generate a random number within a given range of values.1srand() rand() #include&lt;cstdlib.h&gt; #include&lt;ctime.h&gt; Second,Create a main function that processes one guess from the player, and provides hints Third,Add what we need to allow for multiple guesses until the player guesses the number.]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[C++ 关于cin() 和 getline();]]></title>
+    <url>%2F2017%2F03%2F13%2Fc%2B%2B_cin%2F</url>
+    <content type="text"><![CDATA[cin &gt;&gt; 输入流遇到空格（space）会当作是输入结束的标志，例如下面的操作：1234string name;cout &lt;&lt; "Please input your name :" ;cin &gt;&gt; name;cout &lt;&lt; "Your name is " &lt;&lt; name &lt;&lt; endl; 当你在终端输入的的名字有空格时就不能完整的输出你的名字，输出情况如下:12Please input your name : Smith EdwardYour name is Smith 在这里我们可以清楚的看到，输出的结果与我们想要的结果不同，这是为什么呢？ 查相关资料我们会发现 cin 遇到空格时会当作是输入结束的标志， 所以在本例中只能输出 Smith 。 那么我们想完整的输出我们的名字时要要怎样处理，这里要介绍行输入函数getline(),用法如下：（定义还是用上面的定义，只是输入函数改为getline()）1getline( cin , name); 则输出的结果如下：12Please input your name : Smith EdwardYour name is Smith Edward 在这里我们可以看到，我们的名字可以完整的输出了，所以遇到要按行输出的时候我们可以使用 Getline() 函数]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F03%2F13%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
