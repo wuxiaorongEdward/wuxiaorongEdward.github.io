@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F01%2F18%2Fpython%2F</url>
+    <content type="text"><![CDATA[title:pythonС֪ʶ###���ַ���������ĸ��д��������Сд1231��s.capitalize()2��s[0].upper + s[1:].lower()3��s.title()]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[统计统计文件的字符数]]></title>
     <url>%2F2017%2F09%2F07%2Fcountcharacter%2F</url>
     <content type="text"><![CDATA[注意： 统计文件中的字符数，其中空格算一个字符，空行占一个换行符（‘\n’）, 统计的时候可以用 if 语句去掉， 文件的结束不是以换行符‘\n’结束，而是以 EOF 结束 请求用户输入文件名统计文件的字符：123456789101112131415161718192021222324252627282930313233343536//filename: countcharacters.c //auther: wuxiaorong 2017/9/7#include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;int main()&#123; char ch; FILE * fp; char name[41]; long count = 0; printf(&quot;Enter the file :&quot; ); scanf(&quot;%s&quot;, name); if((fp = fopen(name, &quot;r&quot;)) == NULL) &#123; printf(&quot;can&apos;t open this file !\n&quot;); EXIT_FAILURE;&#125; while((ch = getc(fp)) != EOF) &#123; if(ch == &apos;\n&apos; || ch == &apos; &apos;) continue; count++;&#125;if(fclose(fp) != 0 ) &#123; fprintf(stderr, &quot;something wrong !&quot;); EXIT_FAILURE;&#125;printf(&quot;this file has %ld characters !\n&quot;, count); return 0;&#125; 交互命令统计文件字符：123456789101112131415161718192021222324252627282930313233//standardIO.c using I/O#include&lt;stdio.h&gt;#include&lt;stdlib.h&gt; // exit()int main(int argc, char * argv[])&#123; FILE *fp; int ch; long count = 0; if(argc != 2) &#123; printf(&quot;Usage: %s filename\n&quot;, argv[0]); // exit(1); EXIT_FAILURE; &#125; if((fp = fopen(argv[1], &quot;r&quot;)) == NULL) &#123; printf(&quot;can&apos;t open this file&quot;); // exit(1); EXIT_FAILURE; &#125; while((ch = getc(fp)) != EOF) &#123; if(ch == &apos;\n&apos; || ch == &apos; &apos;) continue; // putchar(ch); count++; &#125; fclose(fp); printf(&quot;this file %s has %ld characters\n&quot;, argv[0], count); return 0;&#125; 12gcc filename.c./a.out data.txt]]></content>
