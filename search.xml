@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F12%2F30%2Fnew%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post"]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[shell 编程学习]]></title>
     <url>%2F2018%2F12%2F30%2Fshell%2F</url>
     <content type="text"><![CDATA[shell 编程像其他编程语言一样，同样遵循一些语法，同时要了解shell和shell编程是有区别的。 First shell按照我们学习编程的经历，编的第一个程序都是打印Hello world, “你好，世界 ！”，所以我们也是从这个程序开始。12#!/bin/bashecho &apos;Hello world !&apos; compile/riun the programming在LINUX环境下编译 shell 程序有三种方法： 1 使用 chmod +x 赋予该程序的可执行权限，然后直接执行。 2 使用你使用的命令解释 bash执行， bash filename。 3 使用source, source filename, (或者使用 . 代替 source ) 通常情况下, 最方便的方式就是方式1, 通过方式1执行你需要在脚本第一行写好这段脚本由哪个解释器来解释, 而通过方式2来执行则没有这个限制, 写了也没用.除此之外方式1与方式2执行命令就没有区别了, 但方式3执行的方式与前两种都不同: 使用source执行shell脚本时, 不会创建子进程, 而是在父进程中直接执行! variable 变量在shell语言中同样有变量这一概念，但shell中的变量与其他语言中的变量又有区别： 1 在shell中变量只针对字符串这一概念 2 字符串的长度的限制 3 字符串也可以进行比较等各种操作用法：1variable_name=&quot;string&quot; #在“=”的两边不要有空格 注意: 在shell 程序中注释使用的是#，其后的语句在编译时会被忽略，注释只是为了方便自己和他人阅读程序，方便程序的维护。 变量分类 1 局部变量 2 全局变量 变量的使用使用变量的格式如下：在变量名前加上美元符$12name=&apos;Edward&apos;echo $name 当执行程序时打印出来的就是字符串Edward, 变量在写程序的时候带来了极大的方便。]]></content>
