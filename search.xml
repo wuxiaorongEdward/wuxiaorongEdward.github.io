@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[shell 编程学习]]></title>
+    <url>%2F2018%2F12%2F30%2Fshell%2F</url>
+    <content type="text"><![CDATA[shell 编程像其他编程语言一样，同样遵循一些语法，同时要了解shell和shell编程是有区别的。 First shell按照我们学习编程的经历，编的第一个程序都是打印Hello world, “你好，世界 ！”，所以我们也是从这个程序开始。12#!/bin/bashecho &apos;Hello world !&apos; compile/riun the programming在LINUX环境下编译 shell 程序有三种方法： 1 使用 chmod +x 赋予该程序的可执行权限，然后直接执行。 2 使用你使用的命令解释 bash执行， bash filename。 3 使用source, source filename, (或者使用 . 代替 source ) 通常情况下, 最方便的方式就是方式1, 通过方式1执行你需要在脚本第一行写好这段脚本由哪个解释器来解释, 而通过方式2来执行则没有这个限制, 写了也没用.除此之外方式1与方式2执行命令就没有区别了, 但方式3执行的方式与前两种都不同: 使用source执行shell脚本时, 不会创建子进程, 而是在父进程中直接执行! variable 变量在shell语言中同样有变量这一概念，但shell中的变量与其他语言中的变量又有区别： 1 在shell中变量只针对字符串这一概念 2 字符串的长度的限制 3 字符串也可以进行比较等各种操作用法：1variable_name=&quot;string&quot; #在“=”的两边不要有空格 注意: 在shell 程序中注释使用的是#，其后的语句在编译时会被忽略，注释只是为了方便自己和他人阅读程序，方便程序的维护。 变量分类 1 局部变量 2 全局变量 变量的使用使用变量的格式如下：在变量名前加上美元符$12name=&apos;Edward&apos;echo $name 当执行程序时打印出来的就是字符串Edward, 变量在写程序的时候带来了极大的方便。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux之正则表达式]]></title>
+    <url>%2F2018%2F02%2F01%2FRE%2F</url>
+    <content type="text"><![CDATA[正则表达式主要是用于字符串的匹配，属于模糊匹配，主要用于文本信息的筛选和处理。\包括基本正则和扩展正则。 正则表达式与通配符的区别：通配符（wtilcard）代表的是bash操作接口的一个功能，但正则表达式则是一种字符串处理的表达式。 特殊符号 特殊符号 代表的意义 [:alnum:] 代表英文大小写和数字 [:alpha:] 代表英文大小写 [:digit:] 代表数字 [:upper:] 代表大写字母 [[:lower:] 代表小写字母 shell正则grep123456789usage: grep [option] filename option: [acivn] -A -B a binary文件以TEXT文件方式查找 c 统计查找字符串的次数 i 忽略大小写 v 取反 n 打印行号 A after 同时匹配行后面的n行 B before 同时打印匹配行前的N行 -注-：grep命令是以行为单位进行数据的选取。 当用特殊符号表示时，用法如下：12grep -n &apos;[^[:lower:]]oo&apos; filename #匹配oo前面的字符不是小写字符grep -n &apos;[[:digit:]]&apos; filename #匹配含有数字的行 行首行尾的匹配^$ 123grep -n &apos;^the&apos; filename #匹配以the开头的行grep -n &apos;\.$&apos; filename #匹配以“.”结尾的行grep -n &apos;^$&apos; filename #匹配空白行 . 表示任意一个字符 表示重复*前面的字符0次或多次 {}限定连续字符的范围，表示{}前面的字符的n到m次1grep -n &apos;o\&#123;2,5\&#125;&apos; filename #匹配o出现2到5次的行 基础正则的表达式字符 RE字符 意义 ^world 以word开头的行 world$ 以word结尾的行 . 任意一个字符 [list] 匹配list中的任意一个字符 \ 转移字符，用来转移特殊的字符，如. \ $ ^ 等 [n1-n2] 匹配选取字符的范围，数字可用[0-9]或[:digit:]表示 [^] 取反 {} 连续字符的范围 grep -E = egrep 扩展正则表达式 egrep扩展正则表达式是基础正则表达式的加强|RE|意义||:–:|:–||+|重复一个或一个以上前面的re字符||？|0个或一个前面的re字符||||条件（or）||()|找出“组”字符串||（）+|多个重复组辨别| sed工具sed是一个管道命令，可以用来删除、替换、新增、选取特定的行等功能。 用法如下：123456789101112 sed [-nefr] &apos;动作&apos; n ： silent安静模式，一般同“p”一起用 e ： 直接在命令行模式上进行编辑 f ： 直接写如文件 -f filename i : 直接修改编辑的文件 动作说明： a : 新增 c : 替换 d ：删除 p ：打印 s ：替换 eg : 1,20s/old/new/g examples:删除/etc/passwd中的2-5行1nl /etc/passwd | sed &apos;2,5d&apos; 在第二行后面新增两行1nl /etc/passwd | sed &apos;2a fdjklsjdiofn......\n gasdiufhjksldfua.....&apos; 打印有2-5的行1nl /etc/passwd | sed -n &apos;2,5p&apos; 替换字符串1sed 2,5/old/new/g awk工具awk是把一行分成数个字段来处理的，格式如下：1awk &apos;条件1 &#123;动作&#125; 条件2 &#123;动作&#125; ......&apos; filename 在awk中$0,$1,$2…分别表示行，第一个字段，第二个字段。。。。awk内置变量|变量名称|代表的意义||:—:|:—||NF|每一段的字段数 ||NR|目前awk处理的第几行 ||FS|目前的分隔字符，默认为空格或tab键| awk的条件支持逻辑运算1234cat /etc/passwd | awk &apos;&#123;FS=&quot;:&quot;&#125; $3 &lt; 10 &#123;print $1 &quot;\t&quot; $3&#125;&apos; #该处理的第一行的分隔符仍然是空格， 条件是从第二行起作用，要从第一行开始可以用BEGIN关键字 可以修改为如下则从第一行开始处理。 cat /etc/passwd | awk &apos;BEGIN&#123;FS=&quot;:&quot;&#125; $3 &lt; 10 &#123;print $1 &quot;\t&quot; $3&#125;&apos; 关键字还有END]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>%2F2018%2F01%2F18%2Fpython%2F</url>
-    <content type="text"><![CDATA[title:pythonС֪ʶ###���ַ���������ĸ��д��������Сд1231��s.capitalize()2��s[0].upper + s[1:].lower()3��s.title()]]></content>
+    <content type="text"><![CDATA[title:pythonС??ё????????дì???Сд1231bs.capitalize()2bs[0].upper + s[1:].lower()3bs.title()]]></content>
   </entry>
   <entry>
     <title><![CDATA[统计统计文件的字符数]]></title>
@@ -44,11 +54,6 @@
     <title><![CDATA[像计算机科学家一样的思考]]></title>
     <url>%2F2017%2F05%2F12%2Fc%2B%2Bprogramming%2F</url>
     <content type="text"><![CDATA[编程语言这里使用的编程语言是C++，C++以及其他的C、Pascal等语言都是属于高级语言，有高级语言也就相对的有低级语言 ，低级语言也称为汇编语言或者机器语言，而计算机只能识别低级语言，那为什么我们还要学习高级语言。首先高级语言便于 编写，且有较好的移植性，但它也有缺点，就是高级语言必须经过解释或者编译之后才能被计算机识别。 解释是解释一条语句执行一条语句，而编译是把所有的程序语句都编译成机器码之后再一起执行。 高级语言写的代码称为源代码，而经过解释和编译后的程序称为目标代码或可执行代码。 程序 程序：一组计算机指令序列，每一种语言都有如下几种功能：输入、输出、数学运算、测试、重复 调试 编写程序时难免会出现错误，而发现错误的过程就是调试，debugging 编译时错误编译器只能编译正确的程序，当出现语法错误时就会编译失败。 运行时错误 程序能正常执行，但是得出的结果与预期的结果不对，这时就需要调试，以便得出想要的结果。 第一个程序 打印Hello, World :1234567#include&lt;iostream&gt;using namespace;int main()&#123; cout &lt;&lt; &quot;Hello,World&quot; &lt;&lt;endl; return 0;&#125;]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[shell 编程学习]]></title>
-    <url>%2F2017%2F05%2F08%2Fshell%2F</url>
-    <content type="text"><![CDATA[shell 编程像其他编程语言一样，同样遵循一些语法，同时要了解shell和shell编程是有区别的。 First shell按照我们学习编程的经历，编的第一个程序都是打印Hello world, “你好，世界 ！”，所以我们也是从这个程序开始。12#!/bin/bashecho &apos;Hello world !&apos; compile/riun the programming在LINUX环境下编译 shell 程序有三种方法： 1 使用 chmod +x 赋予该程序的可执行权限，然后直接执行。 2 使用你使用的命令解释 bash执行， bash filename。 3 使用source, source filename, (或者使用 . 代替 source ) 通常情况下, 最方便的方式就是方式1, 通过方式1执行你需要在脚本第一行写好这段脚本由哪个解释器来解释, 而通过方式2来执行则没有这个限制, 写了也没用.除此之外方式1与方式2执行命令就没有区别了, 但方式3执行的方式与前两种都不同: 使用source执行shell脚本时, 不会创建子进程, 而是在父进程中直接执行! variable 变量在shell语言中同样有变量这一概念，但shell中的变量与其他语言中的变量又有区别： 1 在shell中变量只针对字符串这一概念 2 字符串的长度的限制 3 字符串也可以进行比较等各种操作用法：1variable_name=&quot;string&quot; #在“=”的两边不要有空格 注意: 在shell 程序中注释使用的是#，其后的语句在编译时会被忽略，注释只是为了方便自己和他人阅读程序，方便程序的维护。 变量分类 1 局部变量 2 全局变量 变量的使用使用变量的格式如下：在变量名前加上美元符$12name=&apos;Edward&apos;echo $name 当执行程序时打印出来的就是字符串Edward, 变量在写程序的时候带来了极大的方便。]]></content>
   </entry>
   <entry>
     <title></title>
