@@ -79,6 +79,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atoet.xml" title="Never Give Up" type="application/atom+xml" />
 
@@ -92,22 +94,43 @@
 
 
 
-<meta name="description" content="注意：
-统计文件中的字符数，其中空格算一个字符，空行占一个换行符（‘\n’）, 统计的时候可以用 if 语句去掉， 文件的结束不是以换行符‘\n’结束，而是以 EOF 结束
-请求用户输入文件名统计文件的字符：123456789101112131415161718192021222324252627282930313233343536//filename: countcharacters.c //a">
+<meta name="description" content="多态多态：同一个对象，在不同的时刻表现出不同的状态，父类的引用指向子类  
+多态的前提
+要有继承的关系。
+要有方法的重写。
+要有父类引用指向子类对象。注意：  没有方法的重写的多态是没有意义的
+
+多态中成员的关系
+成员变量 ：  编译要看左边，左边没有就报错，运行看左边。
+成员方法： 编译看左边，左边没有就报错，运行看右边。注意： 是因为方法有重写，变量没有重写。  
+弊端： 父类不能使用子类的功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计统计文件的字符数">
-<meta property="og:url" content="http://yoursite.coet/2017/09/07/countcharacter/index.html">
+<meta property="og:title" content="Java中OOP的三大特性之一： 多态">
+<meta property="og:url" content="http://yoursite.coet/2019/01/12/java1/index.html">
 <meta property="og:site_name" content="Never Give Up">
-<meta property="og:description" content="注意：
-统计文件中的字符数，其中空格算一个字符，空行占一个换行符（‘\n’）, 统计的时候可以用 if 语句去掉， 文件的结束不是以换行符‘\n’结束，而是以 EOF 结束
-请求用户输入文件名统计文件的字符：123456789101112131415161718192021222324252627282930313233343536//filename: countcharacters.c //a">
-<meta property="og:updated_time" content="2017-09-07T15:21:04.908Z">
+<meta property="og:description" content="多态多态：同一个对象，在不同的时刻表现出不同的状态，父类的引用指向子类  
+多态的前提
+要有继承的关系。
+要有方法的重写。
+要有父类引用指向子类对象。注意：  没有方法的重写的多态是没有意义的
+
+多态中成员的关系
+成员变量 ：  编译要看左边，左边没有就报错，运行看左边。
+成员方法： 编译看左边，左边没有就报错，运行看右边。注意： 是因为方法有重写，变量没有重写。  
+弊端： 父类不能使用子类的功">
+<meta property="og:updated_time" content="2019-01-12T11:06:03.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="统计统计文件的字符数">
-<meta name="twitter:description" content="注意：
-统计文件中的字符数，其中空格算一个字符，空行占一个换行符（‘\n’）, 统计的时候可以用 if 语句去掉， 文件的结束不是以换行符‘\n’结束，而是以 EOF 结束
-请求用户输入文件名统计文件的字符：123456789101112131415161718192021222324252627282930313233343536//filename: countcharacters.c //a">
+<meta name="twitter:title" content="Java中OOP的三大特性之一： 多态">
+<meta name="twitter:description" content="多态多态：同一个对象，在不同的时刻表现出不同的状态，父类的引用指向子类  
+多态的前提
+要有继承的关系。
+要有方法的重写。
+要有父类引用指向子类对象。注意：  没有方法的重写的多态是没有意义的
+
+多态中成员的关系
+成员变量 ：  编译要看左边，左边没有就报错，运行看左边。
+成员方法： 编译看左边，左边没有就报错，运行看右边。注意： 是因为方法有重写，变量没有重写。  
+弊端： 父类不能使用子类的功">
 
 
 
@@ -135,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.coet/2017/09/07/countcharacter/"/>
+  <link rel="canonical" href="http://yoursite.coet/2019/01/12/java1/"/>
 
 
 
 
 
-  <title>统计统计文件的字符数 | Never Give Up</title>
+  <title>Java中OOP的三大特性之一： 多态 | Never Give Up</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -324,7 +347,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.coet/2017/09/07/countcharacter/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.coet/2019/01/12/java1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Edward Wu">
@@ -341,7 +364,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">统计统计文件的字符数</h1>
+          <h1 class="post-title" itemprop="name headline">Java中OOP的三大特性之一： 多态</h1>
         
 
         <div class="post-meta">
@@ -353,8 +376,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T22:56:15+08:00">
-                2017-09-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-12T18:14:38+08:00">
+                2019-01-12
               </time>
             
 
@@ -371,7 +394,7 @@
 
           
           
-             <span id="/2017/09/07/countcharacter/" class="leancloud_visitors" data-flag-title="统计统计文件的字符数">
+             <span id="/2019/01/12/java1/" class="leancloud_visitors" data-flag-title="Java中OOP的三大特性之一： 多态">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -399,11 +422,76 @@
       
 
       
-        <p><strong>注意</strong>：</p>
-<p>统计文件中的字符数，其中空格算一个字符，空行占一个换行符（‘\n’）, 统计的时候可以用 if 语句去掉， 文件的结束不是以换行符‘\n’结束，而是以 EOF 结束</p>
-<h4 id="请求用户输入文件名统计文件的字符："><a href="#请求用户输入文件名统计文件的字符：" class="headerlink" title="请求用户输入文件名统计文件的字符："></a>请求用户输入文件名统计文件的字符：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//filename: countcharacters.c </div><div class="line">//auther: wuxiaorong    2017/9/7</div><div class="line"></div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">#include&lt;stdlib.h&gt;</div><div class="line"></div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">   char ch;</div><div class="line">   FILE * fp;</div><div class="line">   char name[41];</div><div class="line">   long count = 0;</div><div class="line">  printf(&quot;Enter the file :&quot; );</div><div class="line">  scanf(&quot;%s&quot;, name);</div><div class="line"> if((fp = fopen(name, &quot;r&quot;)) == NULL)</div><div class="line">     &#123;</div><div class="line">       printf(&quot;can&apos;t open this file !\n&quot;);</div><div class="line">       EXIT_FAILURE;</div><div class="line">&#125;</div><div class="line"> while((ch = getc(fp)) != EOF)</div><div class="line">     &#123;</div><div class="line">          if(ch == &apos;\n&apos; || ch == &apos; &apos;)</div><div class="line">               continue;</div><div class="line">           count++;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if(fclose(fp) != 0 )</div><div class="line">   &#123;</div><div class="line">      fprintf(stderr, &quot;something wrong !&quot;);</div><div class="line">      EXIT_FAILURE;</div><div class="line">&#125;</div><div class="line"></div><div class="line">printf(&quot;this file has %ld characters !\n&quot;, count);</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="交互命令统计文件字符："><a href="#交互命令统计文件字符：" class="headerlink" title="交互命令统计文件字符："></a>交互命令统计文件字符：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">//standardIO.c      using I/O</div><div class="line"></div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">#include&lt;stdlib.h&gt;     //  exit()</div><div class="line"></div><div class="line">int main(int argc, char * argv[])</div><div class="line">&#123;</div><div class="line">    FILE *fp;</div><div class="line">    int ch;</div><div class="line">    long count = 0;</div><div class="line">    if(argc != 2)</div><div class="line">       &#123;</div><div class="line">         printf(&quot;Usage:    %s    filename\n&quot;, argv[0]);</div><div class="line">          // exit(1);</div><div class="line">            EXIT_FAILURE;</div><div class="line">       &#125;</div><div class="line">    if((fp = fopen(argv[1], &quot;r&quot;)) == NULL)</div><div class="line">       &#123;</div><div class="line">          printf(&quot;can&apos;t open this file&quot;);</div><div class="line">         //  exit(1); </div><div class="line">            EXIT_FAILURE;</div><div class="line">          &#125;</div><div class="line">      while((ch = getc(fp)) != EOF)</div><div class="line">         &#123;   </div><div class="line">              if(ch == &apos;\n&apos; || ch == &apos; &apos;)</div><div class="line">                       continue;</div><div class="line">             //  putchar(ch);</div><div class="line">               count++;</div><div class="line">         &#125;</div><div class="line">     fclose(fp);</div><div class="line">     printf(&quot;this file %s has %ld characters\n&quot;, argv[0], count);</div><div class="line">      return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gcc filename.c</div><div class="line">./a.out data.txt</div></pre></td></tr></table></figure>
+        <h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态：同一个对象，在不同的时刻表现出不同的状态，父类的引用指向子类  </p>
+<h4 id="多态的前提"><a href="#多态的前提" class="headerlink" title="多态的前提"></a>多态的前提</h4><ol>
+<li>要有继承的关系。</li>
+<li>要有方法的重写。</li>
+<li>要有父类引用指向子类对象。<br><strong>注意： </strong> 没有方法的重写的多态是没有意义的</li>
+</ol>
+<h4 id="多态中成员的关系"><a href="#多态中成员的关系" class="headerlink" title="多态中成员的关系"></a>多态中成员的关系</h4><ul>
+<li>成员变量 ：  编译要看左边，左边没有就报错，运行看左边。</li>
+<li>成员方法： 编译看左边，左边没有就报错，运行看右边。<br><strong>注意：</strong> 是因为方法有重写，变量没有重写。  <blockquote>
+<p>弊端： 父类不能使用子类的功能。<br>多态的好处: 提高程序的可维护性和扩展性。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="多态的表现形式"><a href="#多态的表现形式" class="headerlink" title="多态的表现形式"></a>多态的表现形式</h4><ul>
+<li>具体类多态</li>
+<li>抽象类多态</li>
+<li>接口多态</li>
+</ul>
+<h3 id="抽象类型（abstract）"><a href="#抽象类型（abstract）" class="headerlink" title="抽象类型（abstract）"></a>抽象类型（abstract）</h3><p>如何一个方法只有方法声明，没有方法体，那么这个方法是不是具体的，是抽象的，使用关键字： abstract,  在一个类中抽象方法是没有意义的，将来如果有一个类继承这个类，是要必须重写该方法。如果一个类中有抽象方法，则该类必须定义为抽象类。</p>
+<h4 id="抽象类的定义"><a href="#抽象类的定义" class="headerlink" title="抽象类的定义"></a>抽象类的定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">abstract class Demo &#123;</div><div class="line">                public abstract void show();</div><div class="line">            &#125;</div></pre></td></tr></table></figure>
+<p>作用： 强制子类必须完成某些功能。</p>
+<h4 id="抽象类的特点"><a href="#抽象类的特点" class="headerlink" title="抽象类的特点"></a>抽象类的特点</h4><ul>
+<li>抽象方法必须有abstract修饰：   </li>
+<li>抽象方法所在的类肯定是抽象类。</li>
+<li>抽象类中不一定有抽象方法。</li>
+<li>抽象类不能被实例化， 不能有new 创建。</li>
+<li>抽象类用其子类实例化。</li>
+<li>子类继承父类，要么子类是抽象类，要么子类重写父类的抽象方法。   </li>
+</ul>
+<p>抽象类中：</p>
+<ul>
+<li>成员方法：既可以是常量，也可以是变量          </li>
+<li>成员方法：可以是抽象的，也可以是一般的方法</li>
+<li>构造方法： 有，方便子类访问父类的数据进行初始化。</li>
+</ul>
+<h3 id="接口interface"><a href="#接口interface" class="headerlink" title="接口interface"></a>接口interface</h3><h4 id="接口的定义和实现"><a href="#接口的定义和实现" class="headerlink" title="接口的定义和实现"></a>接口的定义和实现</h4><pre><code>interface 接口名 {
+                  }
+
+class 类名 implements 接口名 {     //类实现接口 
+                       }
+</code></pre><h4 id="接口定义的特点"><a href="#接口定义的特点" class="headerlink" title="接口定义的特点"></a>接口定义的特点</h4><ol>
+<li>接口用interface进行定义。</li>
+<li>一个类实现接口用implements实现。</li>
+</ol>
+<h4 id="接口成员的特点"><a href="#接口成员的特点" class="headerlink" title="接口成员的特点"></a>接口成员的特点</h4><ol>
+<li>成员变量： 接口中只有常量  默认  public static final</li>
+<li>构造方法:   没有构造方法</li>
+<li>成员方法： 接口中只有抽象方法   默认为abstract   (推荐写的时候不上默认的内容)<br><strong>注：</strong>接口中可以使用多态。</li>
+</ol>
+<h4 id="接口的思想和原则"><a href="#接口的思想和原则" class="headerlink" title="接口的思想和原则"></a>接口的思想和原则</h4><p>接口的思想： </p>
+<ol>
+<li>接口是对外暴露的规则。</li>
+<li>接口是程序的功能的扩展</li>
+<li><p>接口的现降低了耦合性   </p>
+<p> 耦合性： 类一类的关联关系。<br> 高内聚： 自己完成功能的能力。<br>   程序： 低耦合  高内聚。</p>
+<pre><code>效率和安全,接口可以用来多实现。    
+</code></pre></li>
+<li>单一原则： 接口在定义规范的时候，尽量单一规范。</li>
+</ol>
+<h4 id="接口的特点"><a href="#接口的特点" class="headerlink" title="接口的特点"></a>接口的特点</h4><p>要么本身是抽象类，要么类实现接口的所有功能。</p>
+<h4 id="接口与类的关系"><a href="#接口与类的关系" class="headerlink" title="接口与类的关系"></a>接口与类的关系</h4><h5 id="类与接口的关系："><a href="#类与接口的关系：" class="headerlink" title="类与接口的关系："></a>类与接口的关系：</h5><p>实现关系，可以单实现，也可以多实现；它还可以在继承一个类的同时实现多个接口。</p>
+<h5 id="类与类的关系"><a href="#类与类的关系" class="headerlink" title="类与类的关系"></a>类与类的关系</h5><p>单一继承， 多层继承。</p>
+<h4 id="接口与接口"><a href="#接口与接口" class="headerlink" title="接口与接口"></a>接口与接口</h4><p>继承关系，可以单一继承，也可以多继承。</p>
+<h3 id="接口与抽象类"><a href="#接口与抽象类" class="headerlink" title="接口与抽象类"></a>接口与抽象类</h3><p>共性：都是不断抽象的东西<br>不同点：<br>A；抽象类或者接口的区别<br>抽象类：<br>     成员变量：既可以是常量也可以是变量<br>     构造方法：有；用于子类访问父类的数据进行初始化<br>     成员方法：可以是抽象的，也可以是一般的方法<br>接口：<br>     成员变量： 只有常量，默认为public static final<br>     成员方法： 只有抽象方法 默认为public abstract<br>     构造方法： 没有<br>B: 类与接口的关系：<br>    类与类的关系：<br>        继承关系： 单继承，可以多层继承<br>    类与接口的关系：<br>        实现关系，可以单实现，也可以多实现<br>    接口与接口的关系<br>        继承关系，可以单继承，也可以多继承<br>C:  本质特征（什么时候用抽象类， 什么时候用接口设计）<br>        抽象类被继承体现的是：  is a 的关系， 抽象定义是这个体系中的共性<br>        接口实现的是like a 的关系，接口定义的是这个体系的扩展功能</p>
+<h3 id="面向对象思想"><a href="#面向对象思想" class="headerlink" title="面向对象思想"></a>面向对象思想</h3><ol>
+<li>有那些类。</li>
+<li>类的功能。</li>
+<li>类间的关系。<br><strong>分析的时候，是按照从具体到抽象；实现的时候是按照从抽象到具体。</strong></li>
+</ol>
+
       
     </div>
 
@@ -439,8 +527,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/06/fork/" rel="next" title="Linux 中的 进程管理函数 forl()">
-                <i class="fa fa-chevron-left"></i> Linux 中的 进程管理函数 forl()
+              <a href="/2018/12/30/new/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -448,10 +536,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/18/python/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -587,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求用户输入文件名统计文件的字符："><span class="nav-number">1.</span> <span class="nav-text">请求用户输入文件名统计文件的字符：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#交互命令统计文件字符："><span class="nav-number">2.</span> <span class="nav-text">交互命令统计文件字符：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">1.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#多态的前提"><span class="nav-number">1.1.</span> <span class="nav-text">多态的前提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态中成员的关系"><span class="nav-number">1.2.</span> <span class="nav-text">多态中成员的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多态的表现形式"><span class="nav-number">1.3.</span> <span class="nav-text">多态的表现形式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类型（abstract）"><span class="nav-number">2.</span> <span class="nav-text">抽象类型（abstract）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象类的定义"><span class="nav-number">2.1.</span> <span class="nav-text">抽象类的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象类的特点"><span class="nav-number">2.2.</span> <span class="nav-text">抽象类的特点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口interface"><span class="nav-number">3.</span> <span class="nav-text">接口interface</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的定义和实现"><span class="nav-number">3.1.</span> <span class="nav-text">接口的定义和实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口定义的特点"><span class="nav-number">3.2.</span> <span class="nav-text">接口定义的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口成员的特点"><span class="nav-number">3.3.</span> <span class="nav-text">接口成员的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的思想和原则"><span class="nav-number">3.4.</span> <span class="nav-text">接口的思想和原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口的特点"><span class="nav-number">3.5.</span> <span class="nav-text">接口的特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口与类的关系"><span class="nav-number">3.6.</span> <span class="nav-text">接口与类的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类与接口的关系："><span class="nav-number">3.6.1.</span> <span class="nav-text">类与接口的关系：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类与类的关系"><span class="nav-number">3.6.2.</span> <span class="nav-text">类与类的关系</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口与接口"><span class="nav-number">3.7.</span> <span class="nav-text">接口与接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口与抽象类"><span class="nav-number">4.</span> <span class="nav-text">接口与抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象思想"><span class="nav-number">5.</span> <span class="nav-text">面向对象思想</span></a></li></ol></div>
             
 
           </div>
