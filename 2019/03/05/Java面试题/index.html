@@ -92,37 +92,34 @@
 
 
 
-<meta name="description" content="汉得春招笔试简答题
-java 传参是值传递还是引用传递？
+<meta name="description" content="java 传参是值传递还是引用传递？
 一个方法不能修改一个基本数据类型的参数（数值型和布尔型）。
 
 一个方法可以修改一个引用所指向的对象状态，但这仍然是按值调用而非引用调用。
 
 
-== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。">
+== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。   equals():">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试题">
 <meta property="og:url" content="http://yoursite.coet/2019/03/05/Java面试题/index.html">
 <meta property="og:site_name" content="Never Give Up">
-<meta property="og:description" content="汉得春招笔试简答题
-java 传参是值传递还是引用传递？
+<meta property="og:description" content="java 传参是值传递还是引用传递？
 一个方法不能修改一个基本数据类型的参数（数值型和布尔型）。
 
 一个方法可以修改一个引用所指向的对象状态，但这仍然是按值调用而非引用调用。
 
 
-== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。">
-<meta property="og:updated_time" content="2019-03-05T15:54:56.918Z">
+== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。   equals():">
+<meta property="og:updated_time" content="2019-03-06T17:49:23.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试题">
-<meta name="twitter:description" content="汉得春招笔试简答题
-java 传参是值传递还是引用传递？
+<meta name="twitter:description" content="java 传参是值传递还是引用传递？
 一个方法不能修改一个基本数据类型的参数（数值型和布尔型）。
 
 一个方法可以修改一个引用所指向的对象状态，但这仍然是按值调用而非引用调用。
 
 
-== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。">
+== 与equals() 的区别   ==： 判断的是两个对象的地址是不是相等。即判断两个对象是不是同一个对象。        基本类型使用== 比较的是值        引用类型比较的内存地址。   equals():">
 
 
 
@@ -414,8 +411,7 @@ java 传参是值传递还是引用传递？
       
 
       
-        <p>汉得春招笔试简答题</p>
-<h3 id="java-传参是值传递还是引用传递？"><a href="#java-传参是值传递还是引用传递？" class="headerlink" title="java 传参是值传递还是引用传递？"></a>java 传参是值传递还是引用传递？</h3><ol>
+        <h3 id="java-传参是值传递还是引用传递？"><a href="#java-传参是值传递还是引用传递？" class="headerlink" title="java 传参是值传递还是引用传递？"></a>java 传参是值传递还是引用传递？</h3><ol>
 <li><p>一个方法不能修改一个基本数据类型的参数（数值型和布尔型）。</p>
 </li>
 <li><p>一个方法可以修改一个引用所指向的对象状态，但这仍然是按值调用而非引用调用。</p>
@@ -430,7 +426,34 @@ java 传参是值传递还是引用传递？
       * 修饰变量，则变成一个常量，不能被修改。
 2. finally  是异常处理的一部分，一般都会被执行，只有当在finally之前出项退出jvm时才不会被执行。
 3. finalize 是Object的垃圾回收机制， gc在调用之前调用finalize()方法
-</code></pre>
+</code></pre><h3 id="java的基本数据类型"><a href="#java的基本数据类型" class="headerlink" title="java的基本数据类型"></a>java的基本数据类型</h3><p>  |基本数据类型|对应的包装类(java.long包下)|<br>  |：————：|：————：|<br>  |short| Short|<br>  |int | Integer|<br>  |byte|Byte|<br>  |long|Long|<br>  |float|Float|<br>  |double|Double|<br>  |boolean|Boolean|<br>  |char| Character|</p>
+<h3 id="String-StringBuffer-StringBuilder的区别，StringBuffer-StringBuilder哪一个是线程安全的？"><a href="#String-StringBuffer-StringBuilder的区别，StringBuffer-StringBuilder哪一个是线程安全的？" class="headerlink" title="String\StringBuffer\StringBuilder的区别，StringBuffer\StringBuilder哪一个是线程安全的？"></a>String\StringBuffer\StringBuilder的区别，StringBuffer\StringBuilder哪一个是线程安全的？</h3><h4 id="可变性"><a href="#可变性" class="headerlink" title="可变性"></a>可变性</h4><pre><code>String 类中使用了final 关键字字符数组: **private final char value[]**，所以String对象是不可变的，而StringBuffer与StringBuilder都继承了各自得AbstractStringBuilder.内部定义得是**char value[]**,两个对象可变。
+</code></pre><h4 id="线程安全性"><a href="#线程安全性" class="headerlink" title="线程安全性"></a>线程安全性</h4><pre><code>String类型是可不变得所以是线程安全的。  
+StringBuffer加了同步锁，所以是线程安全的。  
+StringBuilder没有加同步锁，所以是线程不安全的。 
+</code></pre><h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><p>   String 每次创建一个对象都要把引用对象指向新的对象。StringBuffer和StringBuilder则可以在本身的基础上改变，性能上StringBuilder的性能更好，但是却是线程不安全的，所以我们一般都是使用StringBuffer.</p>
+<h3 id="hashCode-与equals"><a href="#hashCode-与equals" class="headerlink" title="hashCode() 与equals()"></a>hashCode() 与equals()</h3><p>   hashCode()获得的是hash值，也叫散列值，int类型，表示的是否是同一个引用对象。<br>   equals()方法是比较两个对象是否是同一个对象。   </p>
+<h3 id="实现一个线程有哪些方法？-Runnable和Callable有什么区别？"><a href="#实现一个线程有哪些方法？-Runnable和Callable有什么区别？" class="headerlink" title="实现一个线程有哪些方法？  Runnable和Callable有什么区别？"></a>实现一个线程有哪些方法？  Runnable和Callable有什么区别？</h3><pre><code>1. 1 继承Thread类 需要重写run()方法 getName()   获取当前运行的线程的名字Thread.currentThread.getName()
+2. 2 实现Runnable接口 需要重写run()方法，调用时要用Thread封装。
+3. 3 实现Callable接口需要实现call（）方法， 需要使用FutureTask封装实现类**FutureTask ftk=new FutureTask(CallableDemo)**
+</code></pre><h3 id="阻塞和挂起有什么区别？"><a href="#阻塞和挂起有什么区别？" class="headerlink" title="阻塞和挂起有什么区别？"></a>阻塞和挂起有什么区别？</h3><h3 id="如何实现一个线程同步？"><a href="#如何实现一个线程同步？" class="headerlink" title="如何实现一个线程同步？"></a>如何实现一个线程同步？</h3><h3 id="如何使5个线程公平执行？"><a href="#如何使5个线程公平执行？" class="headerlink" title="如何使5个线程公平执行？"></a>如何使5个线程公平执行？</h3><h3 id="hashCode-和equals-的有什么不同？"><a href="#hashCode-和equals-的有什么不同？" class="headerlink" title="hashCode()和equals()的有什么不同？"></a>hashCode()和equals()的有什么不同？</h3><h3 id="死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？"><a href="#死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？" class="headerlink" title="死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？"></a>死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？</h3><h4 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h4><pre><code>1. 1、死锁是由于两个或两个以上的进程竞争资源或者由于彼此相互通信而造成的一种阻塞状态，若无外力条件，则不能够运行下去。
+2. 2、现实生活中，如交通十字路口的情况，相向要过桥的两个人等。
+3. 3、死锁与阻塞的区别：死锁一定涉及到多个进程，而阻塞可以只有一个，死锁的解除需要外力，阻塞当条件满足后就会回到就绪态。
+    进程的状态： 就绪态，运行态，阻塞态，完成态，挂起。  
+4. 4、死锁产生的必要条件：
+      * 互斥条件： 当一个进程正在使用独占资源时，如果另一个进程要申请则必须等待。
+      * 请求与保持： 进程站有资源，但是还没有释放就去申请其他资源。
+      * 不可剥夺： 当进程获得资源之后，不可以被剥夺，只能自己释放。
+      * 环路等待： 请求资源构成一个环路，互相等待对方释放资源。
+</code></pre><h4 id="死锁的解决方法"><a href="#死锁的解决方法" class="headerlink" title="死锁的解决方法"></a>死锁的解决方法</h4><pre><code>1.  1 死锁预防  
+   破坏四个条件中的一个，条件比较严格，会降低系统的资源使用率和吞吐量。
+2. 2 死锁避免
+    对分配资源动态检查，只有当不会发生死锁时才分配。
+3. 3 死锁检查和解除
+</code></pre><h3 id="Object有那些方法？"><a href="#Object有那些方法？" class="headerlink" title="Object有那些方法？"></a>Object有那些方法？</h3><blockquote>
+<p>Object类是所有类的父类，所有的类包括arrays, 实现该类方法的所有类。<br>   <strong>protected Object clone()</strong><br>         Creates and returns a copy of this object.<br>   <strong>boolean equals(Object obj)</strong><br>          Indicates whether some other object is “equal to” this one.<br>   <strong>protected void finalize()</strong><br>          Called by the garbage collector on an object when garbage collection determines that there are no more references to the object.<br>   <strong>Class&lt;?&gt; getClass()</strong><br>          Returns the runtime class of this Object.<br>   <strong>int hashCode()</strong><br>          Returns a hash code value for the object.<br>   <strong>void notify()</strong><br>          Wakes up a single thread that is waiting on this object’s monitor.<br>   <strong>void notifyAll()</strong><br>          Wakes up all threads that are waiting on this object’s monitor.<br>   <strong>String toString()</strong><br>           Returns a string representation of the object.<br>  <strong>void wait()</strong><br>          Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object.<br>  <strong>void wait(long timeout)</strong><br>          Causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or a specified amount of time has elapsed.<br>  <strong>void wait(long timeout, int nanos)</strong><br>           Causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object, or some other thread interrupts the current thread, or a certain amount of real time has elapsed. </p>
+</blockquote>
+
       
     </div>
 
@@ -475,6 +498,10 @@ java 传参是值传递还是引用传递？
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/12/shift_bit/" rel="prev" title="C语言中的移位操作">
+                C语言中的移位操作 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -538,7 +565,7 @@ java 传参是值传递还是引用传递？
                alt="Edward Wu" />
           <p class="site-author-name" itemprop="name">Edward Wu</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">记录进步的点点滴滴，做一个逍遥客！</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -546,7 +573,7 @@ java 传参是值传递还是引用传递？
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -610,7 +637,7 @@ java 传参是值传递还是引用传递？
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#java-传参是值传递还是引用传递？"><span class="nav-number">1.</span> <span class="nav-text">java 传参是值传递还是引用传递？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与equals-的区别"><span class="nav-number">2.</span> <span class="nav-text">== 与equals() 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-finally-finalize-的区别"><span class="nav-number">3.</span> <span class="nav-text">final finally finalize 的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#java-传参是值传递还是引用传递？"><span class="nav-number">1.</span> <span class="nav-text">java 传参是值传递还是引用传递？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与equals-的区别"><span class="nav-number">2.</span> <span class="nav-text">== 与equals() 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-finally-finalize-的区别"><span class="nav-number">3.</span> <span class="nav-text">final finally finalize 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java的基本数据类型"><span class="nav-number">4.</span> <span class="nav-text">java的基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-StringBuffer-StringBuilder的区别，StringBuffer-StringBuilder哪一个是线程安全的？"><span class="nav-number">5.</span> <span class="nav-text">String\StringBuffer\StringBuilder的区别，StringBuffer\StringBuilder哪一个是线程安全的？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可变性"><span class="nav-number">5.1.</span> <span class="nav-text">可变性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程安全性"><span class="nav-number">5.2.</span> <span class="nav-text">线程安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能"><span class="nav-number">5.3.</span> <span class="nav-text">性能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode-与equals"><span class="nav-number">6.</span> <span class="nav-text">hashCode() 与equals()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现一个线程有哪些方法？-Runnable和Callable有什么区别？"><span class="nav-number">7.</span> <span class="nav-text">实现一个线程有哪些方法？  Runnable和Callable有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞和挂起有什么区别？"><span class="nav-number">8.</span> <span class="nav-text">阻塞和挂起有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何实现一个线程同步？"><span class="nav-number">9.</span> <span class="nav-text">如何实现一个线程同步？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何使5个线程公平执行？"><span class="nav-number">10.</span> <span class="nav-text">如何使5个线程公平执行？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashCode-和equals-的有什么不同？"><span class="nav-number">11.</span> <span class="nav-text">hashCode()和equals()的有什么不同？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？"><span class="nav-number">12.</span> <span class="nav-text">死锁的概念，死锁的条件，现实生活中有那些死锁的案例，如何写一个程序？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#死锁"><span class="nav-number">12.1.</span> <span class="nav-text">死锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#死锁的解决方法"><span class="nav-number">12.2.</span> <span class="nav-text">死锁的解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object有那些方法？"><span class="nav-number">13.</span> <span class="nav-text">Object有那些方法？</span></a></li></ol></div>
             
 
           </div>
