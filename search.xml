@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Android开发第一行代码]]></title>
+    <url>%2F2019%2F07%2F29%2Farticle%2F</url>
+    <content type="text"><![CDATA[2019年7月29日，从头开始学习android开发，同时也回归自己的博客，希望自己坚持写下去。]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown语法]]></title>
     <url>%2F2019%2F07%2F28%2Fmarkdown%2F</url>
     <content type="text"><![CDATA[一级标题二级标题一共有6级标题，几级标题就有几个#号，在最后一个#之后要有一个空格，再输入标题。 字体 加粗 加粗的字体在两边加两个星号, 如我的世界。 斜体 斜体字在两边加一个星号。 我的世界 斜体加粗 斜体加粗使用三个星号， 我的世界 删除 删除使用两个线， ~~我的世界引用引用在引用的文字前面加&gt;,可以嵌套引用&gt;&gt;或&gt;&gt;&gt; 平凡的世界 一本值得拥有的书。 分割线 使用三个或三个以上的*or-我的世界 图片超链接百度 列表无序列表使用-+星号中的任意一种 我的世界 平凡的世界 好日子 有序列表数字加点 我们的世界观 自我概念 认同管理 嵌套列表上一级和下一级之间空三个空格 我的世界 作者 时间 出版社 平凡的世界 作者 出版时间 表格 姓名 年龄 毕业学校 Edward 21 XD xiaorong 22 XD 代码单行代码用烦引号括起来print (&quot;Hello World !&quot;)代码块使用三个单引号号括起来12345678#include&lt;stdio.h&gt;int main()&#123; printf(&quot;Hello World !&quot;); return 0;&#125; 流程图12345678st=&gt;start: 开始op=&gt;operation: My Operationcond=&gt;condition: Yes or No?e=&gt;endst-&gt;op-&gt;condcond(yes)-&gt;econd(no)-&gt;op&amp;]]></content>
