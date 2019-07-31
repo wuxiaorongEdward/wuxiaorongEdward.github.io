@@ -5,10 +5,10 @@
     <url>%2F2019%2F07%2F31%2Fandroid-ui-button-md%2F</url>
     <content type="text"><![CDATA[android 自带生成的按钮是一个长方形的浅灰色的，这么丑的按钮，我想在实际中应该不会用吧。那么我们有没有一些好的按钮可用尼？其实我们完全可以根据自己的需求来设计自己的按钮。xml文件中提供了一个shape可以根据自己的需求来设计。shape提供了rectangle, oval, line , ring. 在res-&gt;drawable-&gt;右键new Drawable resource file新建文件。 矩形rectangle矩形我们可以设置圆角，填充颜色，只有边框，按键不不按键下显示不同的颜色。 带有圆角的矩形。solid 是填充颜色， corners 是设置圆角的。可以全部一起设置用radius属性，也可以分别给四个角设置。 12345678910&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:shape=&quot;rectangle&quot;&gt; &lt;solid android:color=&quot;#48CFAD&quot;/&gt; &lt;corners android:bottomLeftRadius=&quot;20dp&quot; android:bottomRightRadius=&quot;20dp&quot; android:topLeftRadius=&quot;5dp&quot; android:topRightRadius=&quot;5dp&quot;/&gt;&lt;/shape&gt; 矩形边框。stroke可以设置边框的宽度和颜色， corners 同样可以设置圆角，用法同上。 12345678&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:shape=&quot;rectangle&quot;&gt; &lt;stroke android:color=&quot;#FFFF33&quot; android:width=&quot;5dp&quot;/&gt; &lt;corners android:radius=&quot;5dp&quot;/&gt;&lt;/shape&gt; 设置按下和不按的时候显示不同的颜色。属性的设置用法同上，只是这里使用的是选择selector item 1234567891011121314&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt; &lt;item android:state_pressed=&quot;true&quot;&gt; &lt;shape&gt; &lt;solid android:color=&quot;#003314&quot;/&gt; &lt;corners android:radius=&quot;10dp&quot;/&gt; &lt;/shape&gt; &lt;/item&gt; &lt;item android:state_pressed=&quot;false&quot;&gt; &lt;shape&gt; &lt;solid android:color=&quot;#BBFFD6&quot;/&gt; &lt;corners android:radius=&quot;10dp&quot;/&gt; &lt;/shape&gt; &lt;/item&gt;&lt;/selector&gt;]]></content>
       <categories>
-        <category>android</category>
+        <category>Android</category>
       </categories>
       <tags>
-        <tag>android</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
