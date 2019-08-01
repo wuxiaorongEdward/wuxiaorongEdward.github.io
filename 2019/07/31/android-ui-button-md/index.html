@@ -94,14 +94,15 @@
 
 <meta name="description" content="android 自带生成的按钮是一个长方形的浅灰色的，这么丑的按钮，我想在实际中应该不会用吧。那么我们有没有一些好的按钮可用尼？其实我们完全可以根据自己的需求来设计自己的按钮。xml文件中提供了一个shape可以根据自己的需求来设计。shape提供了rectangle, oval, line , ring.  在res-&amp;gt;drawable-&amp;gt;右键new Drawable resourc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android_ui_button.md">
+<meta property="og:title" content="android UI自定义控件的形状">
 <meta property="og:url" content="http://yoursite.coet/2019/07/31/android-ui-button-md/index.html">
 <meta property="og:site_name" content="慎独">
 <meta property="og:description" content="android 自带生成的按钮是一个长方形的浅灰色的，这么丑的按钮，我想在实际中应该不会用吧。那么我们有没有一些好的按钮可用尼？其实我们完全可以根据自己的需求来设计自己的按钮。xml文件中提供了一个shape可以根据自己的需求来设计。shape提供了rectangle, oval, line , ring.  在res-&amp;gt;drawable-&amp;gt;右键new Drawable resourc">
 <meta property="og:image" content="http://yoursite.coet/img/android-ui-button.png">
-<meta property="og:updated_time" content="2019-07-31T16:48:28.739Z">
+<meta property="og:image" content="http://yoursite.coet/img/android-ring.png">
+<meta property="og:updated_time" content="2019-08-01T15:27:33.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android_ui_button.md">
+<meta name="twitter:title" content="android UI自定义控件的形状">
 <meta name="twitter:description" content="android 自带生成的按钮是一个长方形的浅灰色的，这么丑的按钮，我想在实际中应该不会用吧。那么我们有没有一些好的按钮可用尼？其实我们完全可以根据自己的需求来设计自己的按钮。xml文件中提供了一个shape可以根据自己的需求来设计。shape提供了rectangle, oval, line , ring.  在res-&amp;gt;drawable-&amp;gt;右键new Drawable resourc">
 <meta name="twitter:image" content="http://yoursite.coet/img/android-ui-button.png">
 
@@ -137,7 +138,7 @@
 
 
 
-  <title>android_ui_button.md | 慎独</title>
+  <title>android UI自定义控件的形状 | 慎独</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -337,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">android_ui_button.md</h1>
+          <h1 class="post-title" itemprop="name headline">android UI自定义控件的形状</h1>
         
 
         <div class="post-meta">
@@ -389,7 +390,7 @@
 
           
           
-             <span id="/2019/07/31/android-ui-button-md/" class="leancloud_visitors" data-flag-title="android_ui_button.md">
+             <span id="/2019/07/31/android-ui-button-md/" class="leancloud_visitors" data-flag-title="android UI自定义控件的形状">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,8 +428,25 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:shape=&quot;rectangle&quot;&gt;</div><div class="line">     &lt;stroke</div><div class="line">         android:color=&quot;#FFFF33&quot;</div><div class="line">         android:width=&quot;5dp&quot;/&gt;</div><div class="line">    &lt;corners</div><div class="line">        android:radius=&quot;5dp&quot;/&gt;</div><div class="line">&lt;/shape&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>设置按下和不按的时候显示不同的颜色。<br>属性的设置用法同上，只是这里使用的是选择selector item</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line">   &lt;item android:state_pressed=&quot;true&quot;&gt;</div><div class="line">        &lt;shape&gt;</div><div class="line">            &lt;solid android:color=&quot;#003314&quot;/&gt;</div><div class="line">            &lt;corners android:radius=&quot;10dp&quot;/&gt;</div><div class="line">        &lt;/shape&gt;</div><div class="line">   &lt;/item&gt;</div><div class="line">    &lt;item android:state_pressed=&quot;false&quot;&gt;</div><div class="line">        &lt;shape&gt;</div><div class="line">            &lt;solid android:color=&quot;#BBFFD6&quot;/&gt;</div><div class="line">            &lt;corners android:radius=&quot;10dp&quot;/&gt;</div><div class="line">        &lt;/shape&gt;</div><div class="line">    &lt;/item&gt;</div><div class="line">&lt;/selector&gt;</div></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line">   &lt;item android:state_pressed=&quot;true&quot;&gt;</div><div class="line">        &lt;shape&gt;</div><div class="line">            &lt;solid android:color=&quot;#003314&quot;/&gt;</div><div class="line">            &lt;corners android:radius=&quot;10dp&quot;/&gt;</div><div class="line">        &lt;/shape&gt;</div><div class="line">   &lt;/item&gt;</div><div class="line">    &lt;item android:state_pressed=&quot;false&quot;&gt;</div><div class="line">        &lt;shape&gt;</div><div class="line">            &lt;solid android:color=&quot;#BBFFD6&quot;/&gt;</div><div class="line">            &lt;corners android:radius=&quot;10dp&quot;/&gt;</div><div class="line">        &lt;/shape&gt;</div><div class="line">    &lt;/item&gt;</div><div class="line">&lt;/selector&gt;</div></pre></td></tr></table></figure>
+</li>
 </ol>
+<h3 id="椭圆-oval"><a href="#椭圆-oval" class="headerlink" title="椭圆 oval"></a>椭圆 oval</h3><ol>
+<li><p>填充颜色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:shape=&quot;oval&quot;&gt;</div><div class="line">    &lt;!--填充颜色--&gt;</div><div class="line">    &lt;solid android:color=&quot;#0099FF&quot;/&gt;</div><div class="line">    &lt;!--宽和高，一样的时候就是一个圆--&gt;</div><div class="line">    &lt;size</div><div class="line">        android:width=&quot;100dp&quot;</div><div class="line">        android:height=&quot;50dp&quot;&gt;&lt;/size&gt;</div><div class="line"></div><div class="line">&lt;/shape&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>渐变色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:shape=&quot;oval&quot;&gt;</div><div class="line">    &lt;!--宽和高，一样的时候就是一个圆--&gt;</div><div class="line">    &lt;size</div><div class="line">        android:width=&quot;100dp&quot;</div><div class="line">        android:height=&quot;100dp&quot;&gt;&lt;/size&gt;</div><div class="line">   &lt;gradient</div><div class="line">       android:centerX=&quot;0.5&quot;</div><div class="line">       android:centerY=&quot;0.5&quot;</div><div class="line">       android:type=&quot;sweep&quot;</div><div class="line">       android:startColor=&quot;#F8FFDD&quot;</div><div class="line">       android:endColor=&quot;#EE0000&quot;&gt;&lt;/gradient&gt;</div><div class="line"></div><div class="line">&lt;/shape&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>android:centerX</strong>：表示渐变的X轴起始位置，范围0-1，0.5表示圆心。<br><strong>android:centerY</strong>：表示渐变的Y轴起始位置，范围0-1，0.5表示圆心。<br><strong>android:type</strong>：渐变类型，有三种<br>分别是：</p>
+<ol>
+<li>linear 线性渐变，默认的渐变类型</li>
+<li>radial 放射渐变，设置该项时，android:gradientRadius也必须设置</li>
+<li>sweep 扫描性渐变</li>
+</ol>
+<h3 id="环ring"><a href="#环ring" class="headerlink" title="环ring"></a>环ring</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    android:shape=&quot;ring&quot;</div><div class="line">    android:useLevel=&quot;false&quot;</div><div class="line">    android:thickness=&quot;10dp&quot;&gt;</div><div class="line">    &lt;!--useLevel需要设置为false--&gt;</div><div class="line"></div><div class="line">    &lt;solid android:color=&quot;@color/colorAccent&quot;&gt;&lt;/solid&gt;</div><div class="line"></div><div class="line">    &lt;gradient android:startColor=&quot;@color/colorAccent&quot;</div><div class="line">        android:endColor=&quot;@color/colorPrimary&quot;</div><div class="line">        android:type=&quot;sweep&quot;&gt;&lt;/gradient&gt;</div><div class="line"></div><div class="line">&lt;/shape&gt;</div></pre></td></tr></table></figure>
+<p><img src="/img/android-ring.png" width="60%" height="10%"></p>
 
       
     </div>
@@ -615,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩形rectangle"><span class="nav-number">1.</span> <span class="nav-text">矩形rectangle</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#矩形rectangle"><span class="nav-number">1.</span> <span class="nav-text">矩形rectangle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#椭圆-oval"><span class="nav-number">2.</span> <span class="nav-text">椭圆 oval</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环ring"><span class="nav-number">3.</span> <span class="nav-text">环ring</span></a></li></ol></div>
             
 
           </div>
